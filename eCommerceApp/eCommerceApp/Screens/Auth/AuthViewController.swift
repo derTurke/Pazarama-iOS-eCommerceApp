@@ -16,10 +16,11 @@ protocol SignUpViewDelegate: AnyObject {
     func didTapDoAccount()
 }
 
-final class AuthViewController: UIViewController {
+final class AuthViewController: UIViewController, AlertPresentable {
     //MARK: - Properties
     private let signInView = SignInView()
     private let signUpView = SignUpView()
+    var presenter: ViewToPresenterAuthProtocol?
     //MARK: - Init
     
     //MARK: - Lifecycle
@@ -29,25 +30,43 @@ final class AuthViewController: UIViewController {
         signUpView.delegate = self
         view = signInView
         navigationItem.hidesBackButton = true
+        
+    }
+}
+
+extension AuthViewController: PresenterToViewAuthProtocol {
+    func didErrorOccurred(_ error: Error) {
+        showError(error)
+    }
+    
+    func didSuccess() {
+        
     }
 }
 
 //MARK: - SignInViewDelegate
 extension AuthViewController: SignInViewDelegate {
     func didTapSignIn(email: String, password: String) {
-        print(email)
+        presenter?.signIn(email: email, password: password)
     }
     func didTapDontAccount() {
-        view = signUpView
+        UIView.animate(withDuration: 0.3) {
+            self.view = self.signUpView
+        }
     }
 }
 
 //MARK: - SignUpViewDelegate
 extension AuthViewController: SignUpViewDelegate {
     func didTapSignUp(username: String, email: String, password: String, passwordAgain: String) {
-        print(username)
+        presenter?.signUp(username: username,
+                          email: email,
+                          password: password,
+                          passwordAgain: passwordAgain)
     }
     func didTapDoAccount() {
-        view = signInView
+        UIView.animate(withDuration: 0.3) {
+            self.view = self.signInView
+        }
     }
 }
