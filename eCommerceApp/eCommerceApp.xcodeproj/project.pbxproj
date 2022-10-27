@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3F9CB73F290ABF9800D21403 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CB73E290ABF9800D21403 /* AppDelegate.swift */; };
-		3F9CB743290ABF9800D21403 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CB742290ABF9800D21403 /* ViewController.swift */; };
 		3F9CB748290ABF9900D21403 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F9CB747290ABF9900D21403 /* Assets.xcassets */; };
 		3F9CB74B290ABF9900D21403 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F9CB749290ABF9900D21403 /* LaunchScreen.storyboard */; };
 		3F9CB756290ABF9900D21403 /* eCommerceAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CB755290ABF9900D21403 /* eCommerceAppTests.swift */; };
@@ -16,6 +15,9 @@
 		3F9CB762290ABF9900D21403 /* eCommerceAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CB761290ABF9900D21403 /* eCommerceAppUITestsLaunchTests.swift */; };
 		3F9CB78B290AC35000D21403 /* eCommerceAppAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F9CB78A290AC35000D21403 /* eCommerceAppAPI.framework */; };
 		3F9CB78C290AC35000D21403 /* eCommerceAppAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3F9CB78A290AC35000D21403 /* eCommerceAppAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3F9CB7A0290AC8F400D21403 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CB79F290AC8F400D21403 /* OnboardingViewController.swift */; };
+		3F9CB7A2290AC91200D21403 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CB7A1290AC91200D21403 /* OnboardingView.swift */; };
+		3F9CB7A6290AC9FE00D21403 /* CustomOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CB7A5290AC9FE00D21403 /* CustomOnboardingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +61,6 @@
 /* Begin PBXFileReference section */
 		3F9CB73B290ABF9800D21403 /* eCommerceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eCommerceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F9CB73E290ABF9800D21403 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3F9CB742290ABF9800D21403 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3F9CB747290ABF9900D21403 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F9CB74A290ABF9900D21403 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F9CB74C290ABF9900D21403 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -70,6 +71,9 @@
 		3F9CB761290ABF9900D21403 /* eCommerceAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eCommerceAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3F9CB78A290AC35000D21403 /* eCommerceAppAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = eCommerceAppAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F9CB78F290AC36D00D21403 /* eCommerceAppAPI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = eCommerceAppAPI.xcodeproj; path = ../eCommerceAppAPI/eCommerceAppAPI.xcodeproj; sourceTree = "<group>"; };
+		3F9CB79F290AC8F400D21403 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		3F9CB7A1290AC91200D21403 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		3F9CB7A5290AC9FE00D21403 /* CustomOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomOnboardingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,7 +164,7 @@
 		3F9CB770290ABFAA00D21403 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				3F9CB742290ABF9800D21403 /* ViewController.swift */,
+				3F9CB79E290AC8E400D21403 /* Onboarding */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -219,6 +223,24 @@
 				3F9CB794290AC36D00D21403 /* eCommerceAppAPI.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		3F9CB79E290AC8E400D21403 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				3F9CB7A4290AC9DC00D21403 /* Views */,
+				3F9CB79F290AC8F400D21403 /* OnboardingViewController.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		3F9CB7A4290AC9DC00D21403 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3F9CB7A1290AC91200D21403 /* OnboardingView.swift */,
+				3F9CB7A5290AC9FE00D21403 /* CustomOnboardingView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -368,7 +390,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F9CB743290ABF9800D21403 /* ViewController.swift in Sources */,
+				3F9CB7A6290AC9FE00D21403 /* CustomOnboardingView.swift in Sources */,
+				3F9CB7A2290AC91200D21403 /* OnboardingView.swift in Sources */,
+				3F9CB7A0290AC8F400D21403 /* OnboardingViewController.swift in Sources */,
 				3F9CB73F290ABF9800D21403 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
