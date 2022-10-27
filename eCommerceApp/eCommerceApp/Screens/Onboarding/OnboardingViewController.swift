@@ -86,7 +86,7 @@ final class OnboardingViewController: UIViewController {
     }
     //MARK: - Methods
     private func goAuth() {
-        navigationController?.pushViewController(UIViewController(), animated: true)
+        navigationController?.pushViewController(AuthViewController(), animated: true)
     }
     
     private func updateScrollViewContentOffset(with pageNumber: Int) {

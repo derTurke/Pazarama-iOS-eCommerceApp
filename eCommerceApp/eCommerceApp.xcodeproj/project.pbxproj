@@ -18,6 +18,9 @@
 		3F9CB7A0290AC8F400D21403 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CB79F290AC8F400D21403 /* OnboardingViewController.swift */; };
 		3F9CB7A2290AC91200D21403 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CB7A1290AC91200D21403 /* OnboardingView.swift */; };
 		3F9CB7A6290AC9FE00D21403 /* CustomOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CB7A5290AC9FE00D21403 /* CustomOnboardingView.swift */; };
+		3F9CB7B3290ACFDC00D21403 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CB7B2290ACFDC00D21403 /* AuthViewController.swift */; };
+		3F9CB7BB290AD70A00D21403 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CB7BA290AD70A00D21403 /* SignInView.swift */; };
+		3F9CB7BD290AD71900D21403 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CB7BC290AD71900D21403 /* SignUpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +77,9 @@
 		3F9CB79F290AC8F400D21403 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		3F9CB7A1290AC91200D21403 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		3F9CB7A5290AC9FE00D21403 /* CustomOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomOnboardingView.swift; sourceTree = "<group>"; };
+		3F9CB7B2290ACFDC00D21403 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		3F9CB7BA290AD70A00D21403 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		3F9CB7BC290AD71900D21403 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +170,7 @@
 		3F9CB770290ABFAA00D21403 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				3F9CB7B1290ACFBA00D21403 /* Auth */,
 				3F9CB79E290AC8E400D21403 /* Onboarding */,
 			);
 			path = Screens;
@@ -239,6 +246,24 @@
 			children = (
 				3F9CB7A1290AC91200D21403 /* OnboardingView.swift */,
 				3F9CB7A5290AC9FE00D21403 /* CustomOnboardingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3F9CB7B1290ACFBA00D21403 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				3F9CB7B7290AD4F300D21403 /* Views */,
+				3F9CB7B2290ACFDC00D21403 /* AuthViewController.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		3F9CB7B7290AD4F300D21403 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3F9CB7BA290AD70A00D21403 /* SignInView.swift */,
+				3F9CB7BC290AD71900D21403 /* SignUpView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -391,7 +416,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F9CB7A6290AC9FE00D21403 /* CustomOnboardingView.swift in Sources */,
+				3F9CB7BB290AD70A00D21403 /* SignInView.swift in Sources */,
 				3F9CB7A2290AC91200D21403 /* OnboardingView.swift in Sources */,
+				3F9CB7BD290AD71900D21403 /* SignUpView.swift in Sources */,
+				3F9CB7B3290ACFDC00D21403 /* AuthViewController.swift in Sources */,
 				3F9CB7A0290AC8F400D21403 /* OnboardingViewController.swift in Sources */,
 				3F9CB73F290ABF9800D21403 /* AppDelegate.swift in Sources */,
 			);
