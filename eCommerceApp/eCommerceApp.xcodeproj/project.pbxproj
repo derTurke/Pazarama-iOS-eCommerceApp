@@ -14,6 +14,8 @@
 		3F9CB756290ABF9900D21403 /* eCommerceAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CB755290ABF9900D21403 /* eCommerceAppTests.swift */; };
 		3F9CB760290ABF9900D21403 /* eCommerceAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CB75F290ABF9900D21403 /* eCommerceAppUITests.swift */; };
 		3F9CB762290ABF9900D21403 /* eCommerceAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CB761290ABF9900D21403 /* eCommerceAppUITestsLaunchTests.swift */; };
+		3F9CB78B290AC35000D21403 /* eCommerceAppAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F9CB78A290AC35000D21403 /* eCommerceAppAPI.framework */; };
+		3F9CB78C290AC35000D21403 /* eCommerceAppAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3F9CB78A290AC35000D21403 /* eCommerceAppAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +33,28 @@
 			remoteGlobalIDString = 3F9CB73A290ABF9800D21403;
 			remoteInfo = eCommerceApp;
 		};
+		3F9CB793290AC36D00D21403 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3F9CB78F290AC36D00D21403 /* eCommerceAppAPI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3F9CB77F290AC30500D21403;
+			remoteInfo = eCommerceAppAPI;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3F9CB78D290AC35000D21403 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3F9CB78C290AC35000D21403 /* eCommerceAppAPI.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3F9CB73B290ABF9800D21403 /* eCommerceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eCommerceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,6 +68,8 @@
 		3F9CB75B290ABF9900D21403 /* eCommerceAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eCommerceAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F9CB75F290ABF9900D21403 /* eCommerceAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eCommerceAppUITests.swift; sourceTree = "<group>"; };
 		3F9CB761290ABF9900D21403 /* eCommerceAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eCommerceAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3F9CB78A290AC35000D21403 /* eCommerceAppAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = eCommerceAppAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F9CB78F290AC36D00D21403 /* eCommerceAppAPI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = eCommerceAppAPI.xcodeproj; path = ../eCommerceAppAPI/eCommerceAppAPI.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F9CB78B290AC35000D21403 /* eCommerceAppAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,10 +101,12 @@
 		3F9CB732290ABF9800D21403 = {
 			isa = PBXGroup;
 			children = (
+				3F9CB78E290AC36300D21403 /* Vendor */,
 				3F9CB73D290ABF9800D21403 /* eCommerceApp */,
 				3F9CB754290ABF9900D21403 /* eCommerceAppTests */,
 				3F9CB75E290ABF9900D21403 /* eCommerceAppUITests */,
 				3F9CB73C290ABF9800D21403 /* Products */,
+				3F9CB789290AC35000D21403 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -169,6 +197,30 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		3F9CB789290AC35000D21403 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3F9CB78A290AC35000D21403 /* eCommerceAppAPI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3F9CB78E290AC36300D21403 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				3F9CB78F290AC36D00D21403 /* eCommerceAppAPI.xcodeproj */,
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
+		3F9CB790290AC36D00D21403 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3F9CB794290AC36D00D21403 /* eCommerceAppAPI.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -179,6 +231,7 @@
 				3F9CB737290ABF9800D21403 /* Sources */,
 				3F9CB738290ABF9800D21403 /* Frameworks */,
 				3F9CB739290ABF9800D21403 /* Resources */,
+				3F9CB78D290AC35000D21403 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -259,6 +312,12 @@
 			mainGroup = 3F9CB732290ABF9800D21403;
 			productRefGroup = 3F9CB73C290ABF9800D21403 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 3F9CB790290AC36D00D21403 /* Products */;
+					ProjectRef = 3F9CB78F290AC36D00D21403 /* eCommerceAppAPI.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				3F9CB73A290ABF9800D21403 /* eCommerceApp */,
@@ -267,6 +326,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		3F9CB794290AC36D00D21403 /* eCommerceAppAPI.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = eCommerceAppAPI.framework;
+			remoteRef = 3F9CB793290AC36D00D21403 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		3F9CB739290ABF9800D21403 /* Resources */ = {
@@ -474,8 +543,8 @@
 				INFOPLIST_FILE = eCommerceApp/App/Plists/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -505,8 +574,8 @@
 				INFOPLIST_FILE = eCommerceApp/App/Plists/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
