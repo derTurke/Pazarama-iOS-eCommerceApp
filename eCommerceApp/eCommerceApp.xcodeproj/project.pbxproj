@@ -35,6 +35,14 @@
 		3F9CB7DD290B04AC00D21403 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 3F9CB7DC290B04AC00D21403 /* FirebaseStorage */; };
 		3F9CB7DF290B054900D21403 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F9CB7DE290B054900D21403 /* GoogleService-Info.plist */; };
 		3FD802D8290D726F0022A437 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD802D7290D726F0022A437 /* MainTabBarController.swift */; };
+		3FD802DB290D804B0022A437 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD802DA290D804B0022A437 /* MainViewController.swift */; };
+		3FD802E0290D8E5F0022A437 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD802DF290D8E5F0022A437 /* MainCollectionViewCell.swift */; };
+		3FD802E2290DA9E40022A437 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD802E1290DA9E40022A437 /* MainView.swift */; };
+		3FD802E4290DB7D50022A437 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD802E3290DB7D50022A437 /* MainPresenter.swift */; };
+		3FD802E6290DB7DF0022A437 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD802E5290DB7DF0022A437 /* MainInteractor.swift */; };
+		3FD802E8290DB7F00022A437 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD802E7290DB7F00022A437 /* MainRouter.swift */; };
+		3FD802EA290DB82F0022A437 /* MainEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD802E9290DB82F0022A437 /* MainEntity.swift */; };
+		3FD802EC290DB88E0022A437 /* MainContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD802EB290DB88E0022A437 /* MainContract.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +119,14 @@
 		3F9CB7CA290AFC3B00D21403 /* AlertPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresentable.swift; sourceTree = "<group>"; };
 		3F9CB7DE290B054900D21403 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3FD802D7290D726F0022A437 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		3FD802DA290D804B0022A437 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		3FD802DF290D8E5F0022A437 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
+		3FD802E1290DA9E40022A437 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		3FD802E3290DB7D50022A437 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		3FD802E5290DB7DF0022A437 /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
+		3FD802E7290DB7F00022A437 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		3FD802E9290DB82F0022A437 /* MainEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainEntity.swift; sourceTree = "<group>"; };
+		3FD802EB290DB88E0022A437 /* MainContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContract.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +230,7 @@
 		3F9CB770290ABFAA00D21403 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				3FD802D9290D80310022A437 /* Main */,
 				3FD802D4290D72520022A437 /* Core */,
 				3F9CB7B1290ACFBA00D21403 /* Auth */,
 				3F9CB79E290AC8E400D21403 /* Onboarding */,
@@ -305,8 +322,8 @@
 				3F9CB7BE290AEF4200D21403 /* AuthPresenter.swift */,
 				3F9CB7C0290AEF4F00D21403 /* AuthInteractor.swift */,
 				3F9CB7C6290AF1DA00D21403 /* AuthRouter.swift */,
-				3F9CB7C2290AF06A00D21403 /* AuthContract.swift */,
 				3F464BB8290D52F10007FAC9 /* AuthEntity.swift */,
+				3F9CB7C2290AF06A00D21403 /* AuthContract.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -344,6 +361,29 @@
 				3FD802D7290D726F0022A437 /* MainTabBarController.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		3FD802D9290D80310022A437 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				3FD802DE290D8E430022A437 /* Views */,
+				3FD802DA290D804B0022A437 /* MainViewController.swift */,
+				3FD802E3290DB7D50022A437 /* MainPresenter.swift */,
+				3FD802E5290DB7DF0022A437 /* MainInteractor.swift */,
+				3FD802E7290DB7F00022A437 /* MainRouter.swift */,
+				3FD802E9290DB82F0022A437 /* MainEntity.swift */,
+				3FD802EB290DB88E0022A437 /* MainContract.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		3FD802DE290D8E430022A437 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3FD802DF290D8E5F0022A437 /* MainCollectionViewCell.swift */,
+				3FD802E1290DA9E40022A437 /* MainView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -515,13 +555,21 @@
 				3F9CB7BB290AD70A00D21403 /* SignInView.swift in Sources */,
 				3F9CB7A2290AC91200D21403 /* OnboardingView.swift in Sources */,
 				3F9CB7BD290AD71900D21403 /* SignUpView.swift in Sources */,
+				3FD802E6290DB7DF0022A437 /* MainInteractor.swift in Sources */,
+				3FD802E2290DA9E40022A437 /* MainView.swift in Sources */,
 				3F9CB7C1290AEF4F00D21403 /* AuthInteractor.swift in Sources */,
 				3F9CB7B3290ACFDC00D21403 /* AuthViewController.swift in Sources */,
+				3FD802E8290DB7F00022A437 /* MainRouter.swift in Sources */,
+				3FD802DB290D804B0022A437 /* MainViewController.swift in Sources */,
 				3F464BC0290D59A30007FAC9 /* Encodable+Extensions.swift in Sources */,
 				3F9CB7A0290AC8F400D21403 /* OnboardingViewController.swift in Sources */,
+				3FD802EA290DB82F0022A437 /* MainEntity.swift in Sources */,
+				3FD802E0290D8E5F0022A437 /* MainCollectionViewCell.swift in Sources */,
 				3F9CB7C7290AF1DA00D21403 /* AuthRouter.swift in Sources */,
+				3FD802EC290DB88E0022A437 /* MainContract.swift in Sources */,
 				3FD802D8290D726F0022A437 /* MainTabBarController.swift in Sources */,
 				3F464BBB290D556C0007FAC9 /* ErrorHandling.swift in Sources */,
+				3FD802E4290DB7D50022A437 /* MainPresenter.swift in Sources */,
 				3F9CB73F290ABF9800D21403 /* AppDelegate.swift in Sources */,
 				3F9CB7CB290AFC3B00D21403 /* AlertPresentable.swift in Sources */,
 				3F9CB7C3290AF06A00D21403 /* AuthContract.swift in Sources */,

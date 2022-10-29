@@ -19,8 +19,8 @@ final class MainTabBarController: UITabBarController {
     
     private func setupTabBarController() {
         //Recent View Tab
-        let nav1 = setupViewController(with: UIViewController(),
-                                       tabBarTitle: "Recent",
+        let nav1 = setupViewController(with: MainRouter.createModule(),
+                                       tabBarTitle: "Home",
                                        tabBarImage: UIImage(named: "home")!,
                                        tabBarSelectedImage: nil)
         //Search View Tab
