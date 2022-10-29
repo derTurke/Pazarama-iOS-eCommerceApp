@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class MainViewController: UIViewController {
+final class MainViewController: UIViewController, AlertPresentable {
     //MARK: - Properties
     private let mainView = MainView()
     var presenter: ViewToPresenterMainProtocol?
@@ -17,6 +17,7 @@ final class MainViewController: UIViewController {
         super.viewDidLoad()
         title = "Home"
         view = mainView
+        // CollectionView Delegate and DataSource
         mainView.setCollectionViewDelegate(with: self, andDataSource: self)
         tabBarController?.navigationController?.isNavigationBarHidden = true
         getProducts()
@@ -30,11 +31,11 @@ final class MainViewController: UIViewController {
 //MARK: -
 extension MainViewController: PresenterToViewMainProtocol {
     func didErrorOccurred(_ error: Error) {
-        
+        showError(error)
     }
     
     func didGetProducts() {
-        
+        mainView.refresh()
     }
 }
 
