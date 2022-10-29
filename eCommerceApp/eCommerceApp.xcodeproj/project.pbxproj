@@ -34,6 +34,7 @@
 		3F9CB7DB290B04AC00D21403 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 3F9CB7DA290B04AC00D21403 /* FirebaseRemoteConfig */; };
 		3F9CB7DD290B04AC00D21403 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 3F9CB7DC290B04AC00D21403 /* FirebaseStorage */; };
 		3F9CB7DF290B054900D21403 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F9CB7DE290B054900D21403 /* GoogleService-Info.plist */; };
+		3FD802D8290D726F0022A437 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD802D7290D726F0022A437 /* MainTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,7 @@
 		3F9CB7C6290AF1DA00D21403 /* AuthRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRouter.swift; sourceTree = "<group>"; };
 		3F9CB7CA290AFC3B00D21403 /* AlertPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresentable.swift; sourceTree = "<group>"; };
 		3F9CB7DE290B054900D21403 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3FD802D7290D726F0022A437 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +214,7 @@
 		3F9CB770290ABFAA00D21403 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				3FD802D4290D72520022A437 /* Core */,
 				3F9CB7B1290ACFBA00D21403 /* Auth */,
 				3F9CB79E290AC8E400D21403 /* Onboarding */,
 			);
@@ -333,6 +336,14 @@
 				3F464BBA290D556C0007FAC9 /* ErrorHandling.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		3FD802D4290D72520022A437 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				3FD802D7290D726F0022A437 /* MainTabBarController.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -509,6 +520,7 @@
 				3F464BC0290D59A30007FAC9 /* Encodable+Extensions.swift in Sources */,
 				3F9CB7A0290AC8F400D21403 /* OnboardingViewController.swift in Sources */,
 				3F9CB7C7290AF1DA00D21403 /* AuthRouter.swift in Sources */,
+				3FD802D8290D726F0022A437 /* MainTabBarController.swift in Sources */,
 				3F464BBB290D556C0007FAC9 /* ErrorHandling.swift in Sources */,
 				3F9CB73F290ABF9800D21403 /* AppDelegate.swift in Sources */,
 				3F9CB7CB290AFC3B00D21403 /* AlertPresentable.swift in Sources */,

@@ -35,7 +35,7 @@ final class AuthViewController: UIViewController, AlertPresentable {
     
     //MARK: - Methods
     private func goToMain() {
-        navigationController?.pushViewController(UIViewController(), animated: true)
+        navigationController?.pushViewController(MainTabBarController(), animated: true)
     }
 }
 
