@@ -9,7 +9,7 @@ import Foundation
 
 final class AuthPresenter: ViewToPresenterAuthProtocol {
     // MARK: Properties
-    var view: PresenterToViewAuthProtocol?
+    weak var view: PresenterToViewAuthProtocol?
     var interactor: PresenterToInteractorAuthProtocol?
     var router: PresenterToRouterAuthProtocol?
     
@@ -22,7 +22,7 @@ final class AuthPresenter: ViewToPresenterAuthProtocol {
         interactor?.createUser(username: username,
                                email: email,
                                password: password,
-                               passwordAgain: password)
+                               passwordAgain: passwordAgain)
     }
     
 }
@@ -32,7 +32,7 @@ extension AuthPresenter: InteractorToPresenterAuthProtocol {
         view?.didErrorOccurred(error)
     }
     
-    func didSuccess() {
-        view?.didSuccess()
+    func didAuthSuccess() {
+        view?.didAuthSuccess()
     }
 }

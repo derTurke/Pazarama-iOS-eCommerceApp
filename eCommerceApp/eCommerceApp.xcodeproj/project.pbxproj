@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F464BB9290D52F10007FAC9 /* AuthEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F464BB8290D52F10007FAC9 /* AuthEntity.swift */; };
+		3F464BBB290D556C0007FAC9 /* ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F464BBA290D556C0007FAC9 /* ErrorHandling.swift */; };
+		3F464BC0290D59A30007FAC9 /* Encodable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F464BBF290D59A30007FAC9 /* Encodable+Extensions.swift */; };
 		3F9CB73F290ABF9800D21403 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CB73E290ABF9800D21403 /* AppDelegate.swift */; };
 		3F9CB748290ABF9900D21403 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F9CB747290ABF9900D21403 /* Assets.xcassets */; };
 		3F9CB74B290ABF9900D21403 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F9CB749290ABF9900D21403 /* LaunchScreen.storyboard */; };
@@ -34,6 +37,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		3F464BB6290D52E50007FAC9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3F9CB78F290AC36D00D21403 /* eCommerceAppAPI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3F464BA9290D10AF0007FAC9;
+			remoteInfo = eCommerceAppAPITests;
+		};
 		3F9CB752290ABF9900D21403 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3F9CB733290ABF9800D21403 /* Project object */;
@@ -72,6 +82,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3F464BB8290D52F10007FAC9 /* AuthEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthEntity.swift; sourceTree = "<group>"; };
+		3F464BBA290D556C0007FAC9 /* ErrorHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandling.swift; sourceTree = "<group>"; };
+		3F464BBF290D59A30007FAC9 /* Encodable+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Extensions.swift"; sourceTree = "<group>"; };
 		3F9CB73B290ABF9800D21403 /* eCommerceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eCommerceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F9CB73E290ABF9800D21403 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F9CB747290ABF9900D21403 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -128,6 +141,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F464BBE290D59960007FAC9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3F464BBF290D59A30007FAC9 /* Encodable+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		3F9CB732290ABF9800D21403 = {
 			isa = PBXGroup;
 			children = (
@@ -250,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				3F9CB794290AC36D00D21403 /* eCommerceAppAPI.framework */,
+				3F464BB7290D52E50007FAC9 /* eCommerceAppAPITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -281,6 +303,7 @@
 				3F9CB7C0290AEF4F00D21403 /* AuthInteractor.swift */,
 				3F9CB7C6290AF1DA00D21403 /* AuthRouter.swift */,
 				3F9CB7C2290AF06A00D21403 /* AuthContract.swift */,
+				3F464BB8290D52F10007FAC9 /* AuthEntity.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -297,6 +320,7 @@
 		3F9CB7C8290AFC2500D21403 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				3F464BBE290D59960007FAC9 /* Extensions */,
 				3F9CB7C9290AFC2D00D21403 /* Helpers */,
 			);
 			path = Core;
@@ -306,6 +330,7 @@
 			isa = PBXGroup;
 			children = (
 				3F9CB7CA290AFC3B00D21403 /* AlertPresentable.swift */,
+				3F464BBA290D556C0007FAC9 /* ErrorHandling.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -426,6 +451,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		3F464BB7290D52E50007FAC9 /* eCommerceAppAPITests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = eCommerceAppAPITests.xctest;
+			remoteRef = 3F464BB6290D52E50007FAC9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		3F9CB794290AC36D00D21403 /* eCommerceAppAPI.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -474,11 +506,14 @@
 				3F9CB7BD290AD71900D21403 /* SignUpView.swift in Sources */,
 				3F9CB7C1290AEF4F00D21403 /* AuthInteractor.swift in Sources */,
 				3F9CB7B3290ACFDC00D21403 /* AuthViewController.swift in Sources */,
+				3F464BC0290D59A30007FAC9 /* Encodable+Extensions.swift in Sources */,
 				3F9CB7A0290AC8F400D21403 /* OnboardingViewController.swift in Sources */,
 				3F9CB7C7290AF1DA00D21403 /* AuthRouter.swift in Sources */,
+				3F464BBB290D556C0007FAC9 /* ErrorHandling.swift in Sources */,
 				3F9CB73F290ABF9800D21403 /* AppDelegate.swift in Sources */,
 				3F9CB7CB290AFC3B00D21403 /* AlertPresentable.swift in Sources */,
 				3F9CB7C3290AF06A00D21403 /* AuthContract.swift in Sources */,
+				3F464BB9290D52F10007FAC9 /* AuthEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

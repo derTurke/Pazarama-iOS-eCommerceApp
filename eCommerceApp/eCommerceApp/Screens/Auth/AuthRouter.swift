@@ -8,7 +8,6 @@
 import UIKit
 
 final class AuthRouter: PresenterToRouterAuthProtocol {
-    
     // MARK: Static methods
     static func createModule() -> UIViewController {
         let viewController = AuthViewController()
@@ -21,5 +20,4 @@ final class AuthRouter: PresenterToRouterAuthProtocol {
         
         return viewController
     }
-    
 }

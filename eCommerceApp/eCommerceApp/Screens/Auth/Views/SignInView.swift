@@ -12,6 +12,20 @@ final class SignInView: UIView {
     
     weak var delegate: SignInViewDelegate?
     
+    private let spinner: UIActivityIndicatorView = {
+        let spinner = UIActivityIndicatorView()
+        spinner.style = .whiteLarge
+        spinner.color = UIColor(named: "primary")
+        return spinner
+    }()
+    
+    private let dimmedView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .black
+        view.alpha = 0.0
+        return view
+    }()
+    
     private let iconImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "icon")
@@ -111,7 +125,31 @@ final class SignInView: UIView {
         setupBrandLabel()
         setupSignInLabel()
         setupVerticalStackView()
+        setupDimmedView()
+        setupSpinner()
         
+    }
+    
+    private func setupSpinner(){
+        addSubview(spinner)
+        spinner.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            spinner.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            spinner.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            spinner.widthAnchor.constraint(equalToConstant: 75.0),
+            spinner.heightAnchor.constraint(equalToConstant: 75.0)
+        ])
+    }
+    
+    private func setupDimmedView() {
+        addSubview(dimmedView)
+        dimmedView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            dimmedView.topAnchor.constraint(equalTo: self.topAnchor),
+            dimmedView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            dimmedView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            dimmedView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+        ])
     }
     
     private func setupIconImageView() {
@@ -167,14 +205,31 @@ final class SignInView: UIView {
     }
     
     @objc private func didTapSignIn() {
-        guard let email = emailTextField.text,
-              let password = passwordTextField.text else {
-            return
+        UIView.animate(withDuration: 0.5) {
+            self.dimmedView.alpha = 0.7
+            self.spinner.startAnimating()
         }
-        delegate?.didTapSignIn(email: email, password: password)
+        DispatchQueue.main.asyncAfter(deadline: .now()+1, execute: { [weak self] in
+            guard let self = self else { return }
+            guard let email = self.emailTextField.text,
+                  let password = self.passwordTextField.text else {
+                return
+            }
+            self.delegate?.didTapSignIn(email: email, password: password)
+            self.spinnerHide()
+        })
+        
     }
     
     @objc private func didTapAccount() {
         delegate?.didTapDontAccount()
+    }
+    
+    private func spinnerHide() {
+        UIView.animate(withDuration: 0.5) {
+            self.spinner.stopAnimating()
+            self.spinner.hidesWhenStopped = true
+            self.dimmedView.alpha = 0.0
+        }
     }
 }

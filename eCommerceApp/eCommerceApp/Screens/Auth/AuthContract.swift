@@ -9,11 +9,10 @@ import Foundation
 import UIKit
 
 // MARK: View Output (Presenter -> View)
-protocol PresenterToViewAuthProtocol {
+protocol PresenterToViewAuthProtocol: AnyObject {
     func didErrorOccurred(_ error: Error)
-    func didSuccess()
+    func didAuthSuccess()
 }
-
 
 // MARK: View Input (View -> Presenter)
 protocol ViewToPresenterAuthProtocol {
@@ -25,22 +24,20 @@ protocol ViewToPresenterAuthProtocol {
     func signUp(username: String, email: String, password: String, passwordAgain: String)
 }
 
-
 // MARK: Interactor Input (Presenter -> Interactor)
 protocol PresenterToInteractorAuthProtocol {
     var presenter: InteractorToPresenterAuthProtocol? { get set }
     
     func loginUser(email: String, password: String)
     func createUser(username: String, email: String, password: String, passwordAgain: String)
+    func saveUserInformation(_ user: User?)
 }
-
 
 // MARK: Interactor Output (Interactor -> Presenter)
-protocol InteractorToPresenterAuthProtocol {
+protocol InteractorToPresenterAuthProtocol: AnyObject {
     func didErrorOccurred(_ error: Error)
-    func didSuccess()
+    func didAuthSuccess()
 }
-
 
 // MARK: Router Input (Presenter -> Router)
 protocol PresenterToRouterAuthProtocol {
