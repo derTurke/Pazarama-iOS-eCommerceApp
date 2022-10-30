@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //Setup Initial Window
     private func setupInitialWindow() {
         let window = UIWindow(frame: UIScreen.main.bounds)
-        let viewController = OnboardingViewController()
+        let viewController = SplashViewController()
         window.rootViewController = UINavigationController(rootViewController: viewController)
         window.makeKeyAndVisible()
         self.window = window
