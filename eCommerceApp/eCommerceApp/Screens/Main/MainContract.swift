@@ -20,7 +20,15 @@ protocol ViewToPresenterMainProtocol {
     var interactor: PresenterToInteractorMainProtocol? { get set }
     var router: PresenterToRouterMainProtocol? { get set }
     
+    var products: [Products]? {get set}
+    var numberOfItemsInSection: Int? {get set}
+    
     func getProducts()
+    func productForIndexPath(_ indexPath: IndexPath) -> Products?
+    func insetForSectionAt() -> UIEdgeInsets
+    func sizeForItemAt(with view: UIView) -> CGSize
+    func minimumLineSpacingForSectionAt() -> CGFloat
+    func minimumInteritemSpacingForSectionAt() -> CGFloat
 }
 
 // MARK: Interactor Input (Presenter -> Interactor)
@@ -33,7 +41,7 @@ protocol PresenterToInteractorMainProtocol {
 // MARK: Interactor Output (Interactor -> Presenter)
 protocol InteractorToPresenterMainProtocol: AnyObject {
     func didErrorOccurred(_ error: Error)
-    func didFetchProducts()
+    func didFetchProducts(_ products: [Products])
 }
 
 // MARK: Router Input (Presenter -> Router)

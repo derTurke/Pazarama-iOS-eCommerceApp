@@ -15,9 +15,12 @@ final class MainCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    var price: String? {
+    var price: Double? {
         didSet {
-            productPrice.text = price
+            guard let price = price else {
+                return
+            }
+            productPrice.text = "$\(price)"
         }
     }
     
@@ -30,7 +33,7 @@ final class MainCollectionViewCell: UICollectionViewCell {
     
     private let productName: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "Helvetica-bold", size: 18)
+        label.font = UIFont(name: "Helvetica-bold", size: 15)
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 0
         label.textColor = .black
@@ -39,7 +42,7 @@ final class MainCollectionViewCell: UICollectionViewCell {
     
     private let productPrice: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "Helvetica-bold", size: 18)
+        label.font = UIFont(name: "Helvetica-bold", size: 15)
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 0
         label.textColor = .black

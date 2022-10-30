@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 final class MainViewController: UIViewController, AlertPresentable {
     //MARK: - Properties
@@ -17,7 +18,6 @@ final class MainViewController: UIViewController, AlertPresentable {
         super.viewDidLoad()
         title = "Home"
         view = mainView
-        // CollectionView Delegate and DataSource
         mainView.setCollectionViewDelegate(with: self, andDataSource: self)
         tabBarController?.navigationController?.isNavigationBarHidden = true
         getProducts()
@@ -47,16 +47,22 @@ extension MainViewController: UICollectionViewDelegate {
 //MARK: - UICollectionViewDataSource
 extension MainViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        presenter?.numberOfItemsInSection ?? .zero
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? MainCollectionViewCell else {
             fatalError("MainCollectionViewCell not found.")
         }
-        cell.imageView.image = UIImage(named: "icon")
-        cell.name = "Bu bir deneme ürünüdür."
-        cell.price = "$7.13"
+        guard let product = presenter?.productForIndexPath(indexPath) else {
+            return cell
+        }
+        guard let url = URL(string: product.image ?? "") else {
+            return cell
+        }
+        cell.imageView.kf.setImage(with: url)
+        cell.name = product.title
+        cell.price = product.price
         return cell
     }
 }
@@ -64,18 +70,18 @@ extension MainViewController: UICollectionViewDataSource {
 //MARK: - UICollectionViewDelegateFlowLayout
 extension MainViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10)
+        presenter?.insetForSectionAt() ?? UIEdgeInsets()
     }
         
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(width: (view.frame.width / 2) - 15, height: (view.frame.width / 1.5))
+        presenter?.sizeForItemAt(with: view) ?? CGSize()
     }
         
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        10
+        presenter?.minimumLineSpacingForSectionAt() ?? CGFloat()
     }
         
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        5
+        presenter?.minimumInteritemSpacingForSectionAt() ?? CGFloat()
     }
 }

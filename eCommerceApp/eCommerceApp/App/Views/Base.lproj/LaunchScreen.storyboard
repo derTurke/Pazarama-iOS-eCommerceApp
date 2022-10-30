@@ -24,17 +24,19 @@
                                     <constraint firstAttribute="width" secondItem="Y60-nR-mg0" secondAttribute="height" multiplier="1:1" id="gG1-MO-zeT"/>
                                 </constraints>
                             </imageView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="UkN-ZW-9Dy">
-                                <rect key="frame" x="176.66666666666666" y="506" width="37" height="37"/>
-                                <color key="color" name="primary"/>
-                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="eCommerce" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nef-8h-q96">
+                                <rect key="frame" x="126" y="501" width="138" height="28"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                <color key="textColor" name="primary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="background"/>
                         <constraints>
+                            <constraint firstItem="nef-8h-q96" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="246-V0-d6N"/>
                             <constraint firstItem="Y60-nR-mg0" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="6pF-2W-pRg"/>
-                            <constraint firstItem="UkN-ZW-9Dy" firstAttribute="top" secondItem="Y60-nR-mg0" secondAttribute="bottom" constant="20" id="9nO-Ic-ede"/>
-                            <constraint firstItem="UkN-ZW-9Dy" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="nCS-ha-s0N"/>
+                            <constraint firstItem="nef-8h-q96" firstAttribute="top" secondItem="Y60-nR-mg0" secondAttribute="bottom" constant="15" id="bzA-4y-dRa"/>
                             <constraint firstItem="Y60-nR-mg0" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="oT8-oC-sms"/>
                         </constraints>
                     </view>
