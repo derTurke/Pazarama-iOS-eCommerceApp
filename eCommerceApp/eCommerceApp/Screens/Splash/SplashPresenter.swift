@@ -6,3 +6,33 @@
 //
 
 import Foundation
+import UIKit
+
+final class SplashPresenter: ViewToPresenterSplashProtocol {
+    weak var view: PresenterToViewSplashProtocol?
+    
+    var interactor: PresenterToInteractorSplashProtocol?
+    
+    var router: PresenterToRouterSplashProtocol?
+    
+    func getProducts() {
+        interactor?.fetchProducts()
+    }
+    
+    func getUserDefaults() {
+        interactor?.fetchUserDefaults()
+    }
+}
+
+extension SplashPresenter: InteractorToPresenterSplashProtocol {
+    func didErrorOccurred(_ error: Error) {
+        view?.didErrorOccurred(error)
+    }
+    
+    func didFetchProducts() {
+        view?.didGetProducts()
+    }
+    func didFetchUserDefaults(with viewController: UIViewController) {
+        view?.didGetUserDefaults(with: viewController)
+    }
+}

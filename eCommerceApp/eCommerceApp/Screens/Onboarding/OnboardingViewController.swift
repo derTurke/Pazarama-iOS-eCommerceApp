@@ -87,11 +87,16 @@ final class OnboardingViewController: UIViewController {
     //MARK: - Methods
     private func goAuth() {
         navigationController?.pushViewController(AuthRouter.createModule(), animated: true)
+        setSkipOnboarding()
     }
     
     private func updateScrollViewContentOffset(with pageNumber: Int) {
         let contentOffset = CGPoint(x: pageWidth * CGFloat(pageNumber), y: .zero)
         onboardingView.scrollView.setContentOffset(contentOffset, animated: true)
+    }
+    
+    private func setSkipOnboarding() {
+        UserDefaults.standard.set(1, forKey: "skipOnboarding")
     }
 }
 

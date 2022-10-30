@@ -6,11 +6,19 @@
 //
 
 import Foundation
+import FirebaseFirestore
 
 final class MainInteractor: PresenterToInteractorMainProtocol {
     weak var presenter: InteractorToPresenterMainProtocol?
     
+    private let db = Firestore.firestore()
+    
     func fetchProducts() {
-        print("fetchProducts")
+        db.collection("products").getDocuments() { error in
+            if let error {
+                
+                return
+            }
+        }
     }
 }

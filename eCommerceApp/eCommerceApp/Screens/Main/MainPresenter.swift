@@ -14,18 +14,26 @@ final class MainPresenter: ViewToPresenterMainProtocol {
     
     var router: PresenterToRouterMainProtocol?
     
+    var products: [Products]? {
+        didSet {
+            numberOfItemsInSection = products?.count
+        }
+    }
+    
+    var numberOfItemsInSection: Int?
+    
     func getProducts() {
-        print("getProducts")
         interactor?.fetchProducts()
     }
 }
 
 extension MainPresenter: InteractorToPresenterMainProtocol {
     func didErrorOccurred(_ error: Error) {
-        
+        view?.didErrorOccurred(error)
     }
     
-    func didFetchProducts() {
-        
+    func didFetchProducts(_ products: [Products]) {
+        self.products = products
+        view?.didGetProducts()
     }
 }

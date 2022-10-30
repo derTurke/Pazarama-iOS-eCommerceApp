@@ -79,4 +79,9 @@ final class SplashView: UIView {
             spinner.topAnchor.constraint(equalTo: brandLabel.bottomAnchor, constant: 15)
         ])
     }
+    
+    func hideSpinner() {
+        spinner.stopAnimating()
+        spinner.hidesWhenStopped = true
+    }
 }

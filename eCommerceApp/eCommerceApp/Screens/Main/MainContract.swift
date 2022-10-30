@@ -20,6 +20,9 @@ protocol ViewToPresenterMainProtocol {
     var interactor: PresenterToInteractorMainProtocol? { get set }
     var router: PresenterToRouterMainProtocol? { get set }
     
+    var products: [Products]? {get set}
+    var numberOfItemsInSection: Int? {get set}
+    
     func getProducts()
 }
 
@@ -33,7 +36,7 @@ protocol PresenterToInteractorMainProtocol {
 // MARK: Interactor Output (Interactor -> Presenter)
 protocol InteractorToPresenterMainProtocol: AnyObject {
     func didErrorOccurred(_ error: Error)
-    func didFetchProducts()
+    func didFetchProducts(_ products: [Products])
 }
 
 // MARK: Router Input (Presenter -> Router)
