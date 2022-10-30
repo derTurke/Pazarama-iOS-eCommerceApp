@@ -10,6 +10,8 @@
 		3F464BAC290D10AF0007FAC9 /* eCommerceAppAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F464BAB290D10AF0007FAC9 /* eCommerceAppAPITests.swift */; };
 		3F464BAD290D10AF0007FAC9 /* eCommerceAppAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F9CB77F290AC30500D21403 /* eCommerceAppAPI.framework */; platformFilter = ios; };
 		3F9CB783290AC30500D21403 /* eCommerceAppAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F9CB782290AC30500D21403 /* eCommerceAppAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3FCC71EF290EA3BF00685D2B /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 3FCC71EE290EA3BF00685D2B /* Moya */; };
+		3FCC71F1290EA46500685D2B /* FakeStoreAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC71F0290EA46500685D2B /* FakeStoreAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +29,7 @@
 		3F464BAB290D10AF0007FAC9 /* eCommerceAppAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eCommerceAppAPITests.swift; sourceTree = "<group>"; };
 		3F9CB77F290AC30500D21403 /* eCommerceAppAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = eCommerceAppAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F9CB782290AC30500D21403 /* eCommerceAppAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = eCommerceAppAPI.h; sourceTree = "<group>"; };
+		3FCC71F0290EA46500685D2B /* FakeStoreAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeStoreAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FCC71EF290EA3BF00685D2B /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				3F9CB782290AC30500D21403 /* eCommerceAppAPI.h */,
+				3FCC71F0290EA46500685D2B /* FakeStoreAPI.swift */,
 			);
 			path = eCommerceAppAPI;
 			sourceTree = "<group>";
@@ -128,6 +133,9 @@
 			dependencies = (
 			);
 			name = eCommerceAppAPI;
+			packageProductDependencies = (
+				3FCC71EE290EA3BF00685D2B /* Moya */,
+			);
 			productName = eCommerceAppAPI;
 			productReference = 3F9CB77F290AC30500D21403 /* eCommerceAppAPI.framework */;
 			productType = "com.apple.product-type.framework";
@@ -160,6 +168,9 @@
 				Base,
 			);
 			mainGroup = 3F9CB775290AC30500D21403;
+			packageReferences = (
+				3FCC71ED290EA3BF00685D2B /* XCRemoteSwiftPackageReference "Moya" */,
+			);
 			productRefGroup = 3F9CB780290AC30500D21403 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -200,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FCC71F1290EA46500685D2B /* FakeStoreAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +230,7 @@
 		3F464BB1290D10AF0007FAC9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 57W84AD39K;
@@ -238,6 +251,7 @@
 		3F464BB2290D10AF0007FAC9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 57W84AD39K;
@@ -473,6 +487,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3FCC71ED290EA3BF00685D2B /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3FCC71EE290EA3BF00685D2B /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3FCC71ED290EA3BF00685D2B /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3F9CB776290AC30500D21403 /* Project object */;
 }
