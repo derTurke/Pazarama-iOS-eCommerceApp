@@ -21,10 +21,11 @@ protocol ViewToPresenterMainProtocol {
     var router: PresenterToRouterMainProtocol? { get set }
     
     var products: [Products]? {get set}
-    var numberOfItemsInSection: Int? {get set}
+    var numberOfItemsInSection: Int {get set}
     
     func getProducts()
     func productForIndexPath(_ indexPath: IndexPath) -> Products?
+    func didSelectItemAt(_ indexPath: IndexPath)
     func insetForSectionAt() -> UIEdgeInsets
     func sizeForItemAt(with view: UIView) -> CGSize
     func minimumLineSpacingForSectionAt() -> CGFloat
@@ -47,4 +48,5 @@ protocol InteractorToPresenterMainProtocol: AnyObject {
 // MARK: Router Input (Presenter -> Router)
 protocol PresenterToRouterMainProtocol {
     static func createModule() -> UIViewController
+    func pushToProductDetail(on view: PresenterToViewMainProtocol, with product: Products)
 }

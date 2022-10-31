@@ -5,7 +5,6 @@
 //  Created by GÜRHAN YUVARLAK on 29.10.2022.
 //
 
-import Foundation
 import UIKit
 
 final class MainPresenter: ViewToPresenterMainProtocol {
@@ -18,11 +17,11 @@ final class MainPresenter: ViewToPresenterMainProtocol {
     
     var products: [Products]? {
         didSet {
-            numberOfItemsInSection = products?.count
+            numberOfItemsInSection = products?.count ?? .zero
         }
     }
     
-    var numberOfItemsInSection: Int?
+    var numberOfItemsInSection: Int = .zero
     
     func getProducts() {
         interactor?.fetchProducts()
@@ -30,6 +29,13 @@ final class MainPresenter: ViewToPresenterMainProtocol {
     
     func productForIndexPath(_ indexPath: IndexPath) -> Products? {
         products?[indexPath.row]
+    }
+    
+    func didSelectItemAt(_ indexPath: IndexPath) {
+        guard let product = products?[indexPath.row] else {
+            return
+        }
+        router?.pushToProductDetail(on: view!, with: product)
     }
     
     func insetForSectionAt() -> UIEdgeInsets {

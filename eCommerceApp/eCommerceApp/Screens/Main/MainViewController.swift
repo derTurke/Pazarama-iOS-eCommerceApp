@@ -11,8 +11,7 @@ import Kingfisher
 final class MainViewController: UIViewController, AlertPresentable {
     //MARK: - Properties
     private let mainView = MainView()
-    var presenter: ViewToPresenterMainProtocol?
-    //MARK: - Init
+    var presenter: ViewToPresenterMainProtocol!
     //MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,11 +23,11 @@ final class MainViewController: UIViewController, AlertPresentable {
     }
     //MARK: - Methods
     private func getProducts() {
-        presenter?.getProducts()
+        presenter.getProducts()
     }
 }
 
-//MARK: -
+//MARK: - PresenterToViewMainProtocol
 extension MainViewController: PresenterToViewMainProtocol {
     func didErrorOccurred(_ error: Error) {
         showError(error)
@@ -41,28 +40,22 @@ extension MainViewController: PresenterToViewMainProtocol {
 
 //MARK: - UICollectionViewDelegate
 extension MainViewController: UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        presenter.didSelectItemAt(indexPath)
+    }
 }
 
 //MARK: - UICollectionViewDataSource
 extension MainViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        presenter?.numberOfItemsInSection ?? .zero
+        presenter.numberOfItemsInSection
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? MainCollectionViewCell else {
             fatalError("MainCollectionViewCell not found.")
         }
-        guard let product = presenter?.productForIndexPath(indexPath) else {
-            return cell
-        }
-        guard let url = URL(string: product.image ?? "") else {
-            return cell
-        }
-        cell.imageView.kf.setImage(with: url)
-        cell.name = product.title
-        cell.price = product.price
+        cell.product = presenter.productForIndexPath(indexPath)
         return cell
     }
 }
@@ -70,18 +63,18 @@ extension MainViewController: UICollectionViewDataSource {
 //MARK: - UICollectionViewDelegateFlowLayout
 extension MainViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        presenter?.insetForSectionAt() ?? UIEdgeInsets()
+        presenter.insetForSectionAt()
     }
         
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        presenter?.sizeForItemAt(with: view) ?? CGSize()
+        presenter.sizeForItemAt(with: view)
     }
         
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        presenter?.minimumLineSpacingForSectionAt() ?? CGFloat()
+        presenter.minimumLineSpacingForSectionAt()
     }
         
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        presenter?.minimumInteritemSpacingForSectionAt() ?? CGFloat()
+        presenter.minimumInteritemSpacingForSectionAt()
     }
 }

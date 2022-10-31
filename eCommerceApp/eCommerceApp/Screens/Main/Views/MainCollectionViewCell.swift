@@ -6,20 +6,21 @@
 //
 
 import UIKit
+import Kingfisher
 
 final class MainCollectionViewCell: UICollectionViewCell {
     //MARK: - Properties
-    var name: String? {
-        didSet {
-            productName.text = name
-        }
-    }
     
-    var price: Double? {
+    var product: Products? {
         didSet {
-            guard let price = price else {
+            guard let product = product, let price = product.price else {
                 return
             }
+            guard let url = URL(string: product.image ?? "") else {
+                return
+            }
+            imageView.kf.setImage(with: url)
+            productName.text = product.title
             productPrice.text = "$\(price)"
         }
     }
