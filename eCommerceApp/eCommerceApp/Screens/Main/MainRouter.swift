@@ -20,4 +20,12 @@ final class MainRouter: PresenterToRouterMainProtocol {
         
         return viewController
     }
+    
+    func pushToProductDetail(on view: PresenterToViewMainProtocol, with product: Products) {
+        let productDetailViewController = UIViewController()
+        productDetailViewController.modalPresentationStyle = .fullScreen
+        productDetailViewController.modalTransitionStyle = .partialCurl
+        let viewController = view as! MainViewController
+        viewController.present(productDetailViewController, animated: true)
+    }
 }

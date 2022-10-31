@@ -30,6 +30,7 @@ protocol PresenterToInteractorSplashProtocol {
     var presenter: InteractorToPresenterSplashProtocol? { get set }
     
     func fetchProducts()
+    func addProductsToFirebaseFirestore(_ products: [Products]?)
     func fetchUserDefaults()
 }
 

@@ -11,6 +11,8 @@ import FirebaseFirestore
 
 
 final class SplashInteractor: PresenterToInteractorSplashProtocol {
+    
+    
     //MARK: - Properties
     weak var presenter: InteractorToPresenterSplashProtocol?
     
@@ -24,20 +26,7 @@ final class SplashInteractor: PresenterToInteractorSplashProtocol {
                 case .success(let response):
                     do {
                         let products = try JSONDecoder().decode([Products].self, from: response.data)
-                        for product in products {
-                            guard let productId = product.id else { return }
-                            do {
-                                guard let data = try product.dictionary else { return }
-                                self.db.collection("products").document("\(productId)").setData(data) { error in
-                                    if let error {
-                                        self.presenter?.didErrorOccurred(error)
-                                        return
-                                    }
-                                }
-                            } catch {
-                                self.presenter?.didErrorOccurred(error)
-                            }
-                        }
+                        self.addProductsToFirebaseFirestore(products)
                         self.presenter?.didFetchProducts()
                     } catch {
                         self.presenter?.didErrorOccurred(error)
@@ -46,6 +35,27 @@ final class SplashInteractor: PresenterToInteractorSplashProtocol {
                     self.presenter?.didErrorOccurred(error)
             }
         }
+    }
+    
+    func addProductsToFirebaseFirestore(_ products: [Products]?) {
+        guard let products = products else {
+            return
+        }
+        for product in products {
+            guard let productId = product.id else { return }
+            do {
+                guard let data = try product.dictionary else { return }
+                self.db.collection("products").document("\(productId)").setData(data) { error in
+                    if let error {
+                        self.presenter?.didErrorOccurred(error)
+                        return
+                    }
+                }
+            } catch {
+                self.presenter?.didErrorOccurred(error)
+            }
+        }
+        
     }
     
     func fetchUserDefaults() {
