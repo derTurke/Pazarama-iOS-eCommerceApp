@@ -21,7 +21,7 @@ final class MainCollectionViewCell: UICollectionViewCell {
             }
             imageView.kf.setImage(with: url)
             productName.text = product.title
-            productPrice.text = "$\(price)"
+            productPrice.text = "\(price.priceFormatted)"
         }
     }
     

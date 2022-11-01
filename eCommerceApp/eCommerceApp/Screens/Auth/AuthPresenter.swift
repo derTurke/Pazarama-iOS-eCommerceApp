@@ -34,5 +34,6 @@ extension AuthPresenter: InteractorToPresenterAuthProtocol {
     
     func didAuthSuccess() {
         view?.didAuthSuccess()
+        router?.pushToMain(on: view!)
     }
 }
