@@ -12,7 +12,7 @@ import UIKit
 protocol PresenterToViewSplashProtocol: AnyObject {
     func didErrorOccurred(_ error: Error)
     func didGetProducts()
-    func didGetUserDefaults(with viewController: UIViewController)
+    func didGetUserDefaults()
 }
 
 // MARK: View Input (View -> Presenter)
@@ -44,4 +44,5 @@ protocol InteractorToPresenterSplashProtocol: AnyObject {
 // MARK: Router Input (Presenter -> Router)
 protocol PresenterToRouterSplashProtocol {
     static func createModule() -> UIViewController
+    func pushToProductDetail(on view: PresenterToViewSplashProtocol, with pushViewController: UIViewController)
 }

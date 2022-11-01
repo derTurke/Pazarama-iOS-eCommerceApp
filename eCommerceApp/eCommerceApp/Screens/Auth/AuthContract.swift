@@ -42,4 +42,5 @@ protocol InteractorToPresenterAuthProtocol: AnyObject {
 // MARK: Router Input (Presenter -> Router)
 protocol PresenterToRouterAuthProtocol {
     static func createModule() -> UIViewController
+    func pushToMain(on view: PresenterToViewAuthProtocol)
 }

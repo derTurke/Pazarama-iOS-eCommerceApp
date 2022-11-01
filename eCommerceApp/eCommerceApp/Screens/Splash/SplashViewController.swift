@@ -32,8 +32,7 @@ extension SplashViewController: PresenterToViewSplashProtocol {
         presenter?.getUserDefaults()
     }
     
-    func didGetUserDefaults(with viewController: UIViewController) {
+    func didGetUserDefaults() {
         splashView.hideSpinner()
-        navigationController?.pushViewController(viewController, animated: true)
     }
 }

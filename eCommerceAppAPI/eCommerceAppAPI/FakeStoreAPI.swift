@@ -12,7 +12,7 @@ public let fakeStoreProvider = MoyaProvider<FakeStoreApi>()
 
 public enum FakeStoreApi {
     case getProducts
-    case getSingleProduct(_ id: String)
+    case getSingleProduct(_ id: Int)
 }
 
 extension FakeStoreApi: TargetType {

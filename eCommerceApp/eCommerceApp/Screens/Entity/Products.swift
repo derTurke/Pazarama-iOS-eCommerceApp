@@ -11,16 +11,10 @@ struct Products: Codable {
     let id: Int?
     let title: String?
     let price: Double?
-    let welcomeDescription: String?
+    let description: String?
     let category: String?
     let image: String?
     let rating: Rating?
-
-    enum CodingKeys: String, CodingKey {
-        case id, title, price
-        case welcomeDescription = "description"
-        case category, image, rating
-    }
 }
 
 // MARK: - Rating
@@ -34,7 +28,7 @@ extension Products {
         id = dict["id"] as? Int
         title = dict["title"] as? String
         price = dict["price"] as? Double
-        welcomeDescription = dict["description"] as? String
+        description = dict["description"] as? String
         category = dict["category"] as? String
         image = dict["image"] as? String
         rating = dict["rating"] as? Rating

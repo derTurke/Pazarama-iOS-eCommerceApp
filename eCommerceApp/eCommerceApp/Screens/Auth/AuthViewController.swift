@@ -32,11 +32,6 @@ final class AuthViewController: UIViewController, AlertPresentable {
         navigationItem.hidesBackButton = true
         
     }
-    
-    //MARK: - Methods
-    private func goToMain() {
-        navigationController?.pushViewController(MainTabBarController(), animated: true)
-    }
 }
 
 //MARK: - PresenterToViewAuthProtocol
@@ -46,7 +41,7 @@ extension AuthViewController: PresenterToViewAuthProtocol {
     }
     
     func didAuthSuccess() {
-        goToMain()
+        
     }
 }
 
