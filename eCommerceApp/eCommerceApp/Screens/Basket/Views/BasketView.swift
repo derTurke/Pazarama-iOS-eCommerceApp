@@ -9,6 +9,8 @@ import UIKit
 
 final class BasketView: UIView {
     //MARK: - Properties
+    weak var delegate: BasketViewDelegate?
+    
     private let tableView: UITableView = {
         let tableView = UITableView()
         tableView.backgroundColor = UIColor(named: "background")
@@ -66,7 +68,7 @@ final class BasketView: UIView {
         button.layer.shadowColor = UIColor.black.cgColor
         button.layer.shadowOpacity = 0.25
         button.layer.shadowRadius = 12
-//        button.addTarget(self, action: #selector(), for: .touchUpInside)
+        button.addTarget(self, action: #selector(didTapBuyButton(_:)), for: .touchUpInside)
         return button
     }()
     //MARK: - Init
@@ -133,10 +135,17 @@ final class BasketView: UIView {
         ])
     }
     
+    @objc private func didTapBuyButton(_ sender: UIButton) {
+        delegate?.didTapBuyButton()
+    }
+    
     func setTableViewDelegate(_ delegate: UITableViewDelegate, andDataSource datasource: UITableViewDataSource) {
         tableView.delegate = delegate
         tableView.dataSource = datasource
     }
     
+    func reloadTableView() {
+        tableView.reloadData()
+    }
     
 }

@@ -6,10 +6,31 @@
 //
 
 import UIKit
+import Kingfisher
 
 final class BasketTableViewCell: UITableViewCell {
     //MARK: - Properties
-    var basket: Basket?
+    var delegate: BasketTableViewCellDelegate?
+    var basket: Basket? {
+        didSet {
+            guard let basket = basket,
+                  let imageUrl = basket.image,
+                  let title = basket.title,
+                  let price = basket.price,
+                  let stepperValue = basket.piece else {
+                return
+            }
+            guard let url = URL(string: imageUrl) else {
+                return
+            }
+            productImageView.kf.setImage(with: url)
+            productTitleLabel.text = "\(title)"
+            productPriceLabel.text = "\(price.priceFormatted)"
+            stepper.value = Double(stepperValue)
+            stepperLabel.text = "\(stepperValue)"
+            
+        }
+    }
     
     private let customView: UIView = {
         let view = UIView()
@@ -33,7 +54,6 @@ final class BasketTableViewCell: UITableViewCell {
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 0
         label.textColor = .black
-        label.text = "Lorem ipsum Lorem ipsum Lorem ipsum"
         return label
     }()
     
@@ -43,13 +63,12 @@ final class BasketTableViewCell: UITableViewCell {
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 0
         label.textColor = .black
-        label.text = "$0.00"
         return label
     }()
     
     private let deleteButton: UIButton = {
         let button = UIButton()
-        button.setImage(UIImage(named: "icon"), for: .normal)
+        button.setImage(UIImage(named: "trash"), for: .normal)
         button.addTarget(self, action: #selector(didTapDelete(_:)), for: .touchUpInside)
         return button
     }()
@@ -57,7 +76,6 @@ final class BasketTableViewCell: UITableViewCell {
     private let stepper: UIStepper = {
         let stepper = UIStepper()
         stepper.minimumValue = 1
-        stepper.value = 1
         stepper.addTarget(self, action: #selector(didTapStepper(_:)), for: .touchUpInside)
         return stepper
     }()
@@ -67,7 +85,6 @@ final class BasketTableViewCell: UITableViewCell {
         label.font = UIFont(name: "Helvetica-bold", size: 18)
         label.numberOfLines = 0
         label.textColor = .black
-        label.text = "1"
         label.layer.cornerRadius = 8
         return label
     }()
@@ -109,7 +126,6 @@ final class BasketTableViewCell: UITableViewCell {
     
     private func setupImageView() {
         customView.addSubview(productImageView)
-        productImageView.image = UIImage(named: "icon")
         productImageView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             productImageView.topAnchor.constraint(equalTo: customView.topAnchor),
@@ -169,12 +185,10 @@ final class BasketTableViewCell: UITableViewCell {
     }
     
     @objc private func didTapStepper(_ sender: UIStepper) {
-        
+        delegate?.didTapStepper(basket, piece: sender.value)
     }
     
     @objc private func didTapDelete(_ sender: UIButton) {
-        
+        delegate?.didTapDeleteButton(basket)
     }
-    
-    
 }

@@ -8,6 +8,7 @@
 import Foundation
 
 struct Basket: Codable {
+    let id: String?
     let productId: Int?
     let title: String?
     let image: String?
@@ -17,6 +18,7 @@ struct Basket: Codable {
 
 extension Basket {
     init(from dict: [String: Any]) {
+        id = dict["id"] as? String
         productId = dict["productId"] as? Int
         title = dict["title"] as? String
         image = dict["image"] as? String

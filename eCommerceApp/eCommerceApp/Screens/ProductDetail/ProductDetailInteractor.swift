@@ -72,7 +72,7 @@ final class ProductDetailInteractor: PresenterToInteractorProductDetailProtocol 
             return
         }
         let totalPrice = price * Double(piece)
-        let basket = Basket(productId: productId, title: productTitle, image: productImage, piece: piece, price: totalPrice)
+        let basket = Basket(id: "",productId: productId, title: productTitle, image: productImage, piece: piece, price: totalPrice)
         do {
             guard let data = try basket.dictionary else { return }
             self.db.collection("baskets").document("users").collection(uid).addDocument(data: data) { error in

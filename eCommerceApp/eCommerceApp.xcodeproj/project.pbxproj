@@ -51,6 +51,7 @@
 		3F9CB7DB290B04AC00D21403 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 3F9CB7DA290B04AC00D21403 /* FirebaseRemoteConfig */; };
 		3F9CB7DD290B04AC00D21403 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 3F9CB7DC290B04AC00D21403 /* FirebaseStorage */; };
 		3F9CB7DF290B054900D21403 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F9CB7DE290B054900D21403 /* GoogleService-Info.plist */; };
+		3FA2CD47291309900040B6AB /* DimmedPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA2CD46291309900040B6AB /* DimmedPresentable.swift */; };
 		3FAE640F290FDFAA00DA253D /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE640E290FDFAA00DA253D /* ProductDetailViewController.swift */; };
 		3FAE6411290FDFBA00DA253D /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE6410290FDFBA00DA253D /* ProductDetailView.swift */; };
 		3FAE6413290FE65F00DA253D /* ProductDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE6412290FE65F00DA253D /* ProductDetailPresenter.swift */; };
@@ -165,6 +166,7 @@
 		3F9CB7C6290AF1DA00D21403 /* AuthRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRouter.swift; sourceTree = "<group>"; };
 		3F9CB7CA290AFC3B00D21403 /* AlertPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresentable.swift; sourceTree = "<group>"; };
 		3F9CB7DE290B054900D21403 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3FA2CD46291309900040B6AB /* DimmedPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimmedPresentable.swift; sourceTree = "<group>"; };
 		3FAE640E290FDFAA00DA253D /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		3FAE6410290FDFBA00DA253D /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
 		3FAE6412290FE65F00DA253D /* ProductDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailPresenter.swift; sourceTree = "<group>"; };
@@ -462,6 +464,7 @@
 			children = (
 				3F9CB7CA290AFC3B00D21403 /* AlertPresentable.swift */,
 				3F464BBA290D556C0007FAC9 /* ErrorHandling.swift */,
+				3FA2CD46291309900040B6AB /* DimmedPresentable.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -720,6 +723,7 @@
 				3F9CB7A0290AC8F400D21403 /* OnboardingViewController.swift in Sources */,
 				3F862BB12911671A00B9C902 /* SearchRouter.swift in Sources */,
 				3FCC71FB290EAAE400685D2B /* SplashInteractor.swift in Sources */,
+				3FA2CD47291309900040B6AB /* DimmedPresentable.swift in Sources */,
 				3FD802E0290D8E5F0022A437 /* MainCollectionViewCell.swift in Sources */,
 				3F9CB7C7290AF1DA00D21403 /* AuthRouter.swift in Sources */,
 				3F862BC72912841A00B9C902 /* BasketViewController.swift in Sources */,
