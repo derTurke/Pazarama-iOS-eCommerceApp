@@ -20,6 +20,13 @@
 		3F862BB12911671A00B9C902 /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F862BB02911671A00B9C902 /* SearchRouter.swift */; };
 		3F862BBC2911B31800B9C902 /* MainTabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F862BBB2911B31800B9C902 /* MainTabBarViewModel.swift */; };
 		3F862BC22911B53700B9C902 /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F862BC12911B53700B9C902 /* Notification+Extension.swift */; };
+		3F862BC52912840D00B9C902 /* BasketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F862BC42912840D00B9C902 /* BasketView.swift */; };
+		3F862BC72912841A00B9C902 /* BasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F862BC62912841A00B9C902 /* BasketViewController.swift */; };
+		3F862BCA2912925300B9C902 /* BasketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F862BC92912925300B9C902 /* BasketTableViewCell.swift */; };
+		3F862BCC2912CBE100B9C902 /* BasketPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F862BCB2912CBE100B9C902 /* BasketPresenter.swift */; };
+		3F862BCE2912CBEB00B9C902 /* BasketInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F862BCD2912CBEB00B9C902 /* BasketInteractor.swift */; };
+		3F862BD02912CBF900B9C902 /* BasketRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F862BCF2912CBF900B9C902 /* BasketRouter.swift */; };
+		3F862BD22912CC0700B9C902 /* BasketContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F862BD12912CC0700B9C902 /* BasketContract.swift */; };
 		3F9CB73F290ABF9800D21403 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CB73E290ABF9800D21403 /* AppDelegate.swift */; };
 		3F9CB748290ABF9900D21403 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F9CB747290ABF9900D21403 /* Assets.xcassets */; };
 		3F9CB74B290ABF9900D21403 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F9CB749290ABF9900D21403 /* LaunchScreen.storyboard */; };
@@ -127,6 +134,13 @@
 		3F862BB02911671A00B9C902 /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
 		3F862BBB2911B31800B9C902 /* MainTabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewModel.swift; sourceTree = "<group>"; };
 		3F862BC12911B53700B9C902 /* Notification+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extension.swift"; sourceTree = "<group>"; };
+		3F862BC42912840D00B9C902 /* BasketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketView.swift; sourceTree = "<group>"; };
+		3F862BC62912841A00B9C902 /* BasketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewController.swift; sourceTree = "<group>"; };
+		3F862BC92912925300B9C902 /* BasketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketTableViewCell.swift; sourceTree = "<group>"; };
+		3F862BCB2912CBE100B9C902 /* BasketPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketPresenter.swift; sourceTree = "<group>"; };
+		3F862BCD2912CBEB00B9C902 /* BasketInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketInteractor.swift; sourceTree = "<group>"; };
+		3F862BCF2912CBF900B9C902 /* BasketRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketRouter.swift; sourceTree = "<group>"; };
+		3F862BD12912CC0700B9C902 /* BasketContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketContract.swift; sourceTree = "<group>"; };
 		3F9CB73B290ABF9800D21403 /* eCommerceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eCommerceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F9CB73E290ABF9800D21403 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F9CB747290ABF9900D21403 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -238,6 +252,28 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
+		3F862BC3291283F800B9C902 /* Basket */ = {
+			isa = PBXGroup;
+			children = (
+				3F862BC82912923800B9C902 /* Views */,
+				3F862BC62912841A00B9C902 /* BasketViewController.swift */,
+				3F862BCB2912CBE100B9C902 /* BasketPresenter.swift */,
+				3F862BCD2912CBEB00B9C902 /* BasketInteractor.swift */,
+				3F862BCF2912CBF900B9C902 /* BasketRouter.swift */,
+				3F862BD12912CC0700B9C902 /* BasketContract.swift */,
+			);
+			path = Basket;
+			sourceTree = "<group>";
+		};
+		3F862BC82912923800B9C902 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3F862BC42912840D00B9C902 /* BasketView.swift */,
+				3F862BC92912925300B9C902 /* BasketTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		3F9CB732290ABF9800D21403 = {
 			isa = PBXGroup;
 			children = (
@@ -302,6 +338,7 @@
 			isa = PBXGroup;
 			children = (
 				3F862B98291110C300B9C902 /* Entity */,
+				3F862BC3291283F800B9C902 /* Basket */,
 				3F862BA5291166C800B9C902 /* Search */,
 				3FAE640A290FDF9100DA253D /* ProductDetail */,
 				3FD802D9290D80310022A437 /* Main */,
@@ -652,8 +689,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F862BD02912CBF900B9C902 /* BasketRouter.swift in Sources */,
 				3FAE640F290FDFAA00DA253D /* ProductDetailViewController.swift in Sources */,
 				3FAE6411290FDFBA00DA253D /* ProductDetailView.swift in Sources */,
+				3F862BCE2912CBEB00B9C902 /* BasketInteractor.swift in Sources */,
 				3F9CB7BF290AEF4200D21403 /* AuthPresenter.swift in Sources */,
 				3FAE6415290FE67700DA253D /* ProductDetailInteractor.swift in Sources */,
 				3F862B9A291110D700B9C902 /* Basket.swift in Sources */,
@@ -663,6 +702,7 @@
 				3F9CB7BB290AD70A00D21403 /* SignInView.swift in Sources */,
 				3F9CB7A2290AC91200D21403 /* OnboardingView.swift in Sources */,
 				3F9CB7BD290AD71900D21403 /* SignUpView.swift in Sources */,
+				3F862BD22912CC0700B9C902 /* BasketContract.swift in Sources */,
 				3F862BA9291166F100B9C902 /* SearchViewController.swift in Sources */,
 				3FD802E6290DB7DF0022A437 /* MainInteractor.swift in Sources */,
 				3F862BBC2911B31800B9C902 /* MainTabBarViewModel.swift in Sources */,
@@ -682,9 +722,11 @@
 				3FCC71FB290EAAE400685D2B /* SplashInteractor.swift in Sources */,
 				3FD802E0290D8E5F0022A437 /* MainCollectionViewCell.swift in Sources */,
 				3F9CB7C7290AF1DA00D21403 /* AuthRouter.swift in Sources */,
+				3F862BC72912841A00B9C902 /* BasketViewController.swift in Sources */,
 				3FD802EC290DB88E0022A437 /* MainContract.swift in Sources */,
 				3FD802D8290D726F0022A437 /* MainTabBarController.swift in Sources */,
 				3FCC71F6290EAAC600685D2B /* SplashViewController.swift in Sources */,
+				3F862BCC2912CBE100B9C902 /* BasketPresenter.swift in Sources */,
 				3FAE6417290FE68400DA253D /* ProductDetailRouter.swift in Sources */,
 				3F464BBB290D556C0007FAC9 /* ErrorHandling.swift in Sources */,
 				3FD802E4290DB7D50022A437 /* MainPresenter.swift in Sources */,
@@ -692,8 +734,10 @@
 				3F9CB73F290ABF9800D21403 /* AppDelegate.swift in Sources */,
 				3F862B9C291125DE00B9C902 /* Double+Extensions.swift in Sources */,
 				3F9CB7CB290AFC3B00D21403 /* AlertPresentable.swift in Sources */,
+				3F862BCA2912925300B9C902 /* BasketTableViewCell.swift in Sources */,
 				3F862BA7291166DE00B9C902 /* SearchView.swift in Sources */,
 				3FAE6419290FE6BB00DA253D /* ProductDetailContract.swift in Sources */,
+				3F862BC52912840D00B9C902 /* BasketView.swift in Sources */,
 				3F9CB7C3290AF06A00D21403 /* AuthContract.swift in Sources */,
 				3F464BB9290D52F10007FAC9 /* User.swift in Sources */,
 				3FCC71FF290EAB0C00685D2B /* Products.swift in Sources */,
