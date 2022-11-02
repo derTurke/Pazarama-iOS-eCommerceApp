@@ -62,7 +62,7 @@ final class SplashInteractor: PresenterToInteractorSplashProtocol {
         if defaults.integer(forKey: "skipOnboarding") == 1 {
             presenter?.didFetchUserDefaults(with: AuthRouter.createModule())
         } else if defaults.string(forKey: "uid") != nil {
-            presenter?.didFetchUserDefaults(with: MainTabBarController())
+            presenter?.didFetchUserDefaults(with: MainTabBarController(viewModel: MainTabBarViewModel()))
         } else {
             presenter?.didFetchUserDefaults(with: OnboardingViewController())
         }

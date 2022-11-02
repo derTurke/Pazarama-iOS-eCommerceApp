@@ -19,6 +19,8 @@ final class ProductDetailInteractor: PresenterToInteractorProductDetailProtocol 
     
     private let defaults = UserDefaults.standard
     
+    private let notificationCenter: NotificationCenter = NotificationCenter.default
+    
     func fetchProduct() {
         guard let product = product,
               let productId = product.id else {
@@ -79,6 +81,7 @@ final class ProductDetailInteractor: PresenterToInteractorProductDetailProtocol 
                     return
                 }
                 self.presenter?.didAddBasketToFirestore()
+                self.notificationCenter.post(name: .getBasketTotalPrice, object: nil)
             }
         } catch {
             self.presenter?.didErrorOccurred(error)

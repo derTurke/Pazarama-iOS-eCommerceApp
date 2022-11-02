@@ -230,7 +230,6 @@ final class ProductDetailView: UIView {
     private func setupImageView() {
         contentView.addSubview(productImageView)
         productImageView.translatesAutoresizingMaskIntoConstraints = false
-        productImageView.image = UIImage(named: "icon")
         NSLayoutConstraint.activate([
             productImageView.topAnchor.constraint(equalTo: scrollView.topAnchor),
             productImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
