@@ -56,14 +56,13 @@ final class MainTabBarViewModel {
         }
         var price = 0.0
         for basket in baskets {
-            price += basket.price ?? 0.0
+            price += basket.totalPrice ?? 0.0
         }
         if price == 0.0 {
             totalPrice = 0.0
         } else {
             totalPrice = price
         }
-        
     }
     
 }

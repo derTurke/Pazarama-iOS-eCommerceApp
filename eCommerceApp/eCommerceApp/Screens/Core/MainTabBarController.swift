@@ -47,10 +47,12 @@ final class MainTabBarController: UITabBarController, AlertPresentable {
     //MARK: - Methods
     @objc private func getTotalPrice() {
         viewModel.fetchBasketTotalPrice()
+        
     }
     
     @objc private func didTapBasket() {
-        
+        let basketNavigationController = UINavigationController(rootViewController: BasketRouter.createModule())
+        present(basketNavigationController, animated: true)
     }
     
     private func setupView() {
