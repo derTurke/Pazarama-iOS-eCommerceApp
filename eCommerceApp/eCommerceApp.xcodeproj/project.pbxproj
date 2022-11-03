@@ -74,6 +74,7 @@
 		3FD802E6290DB7DF0022A437 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD802E5290DB7DF0022A437 /* MainInteractor.swift */; };
 		3FD802E8290DB7F00022A437 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD802E7290DB7F00022A437 /* MainRouter.swift */; };
 		3FD802EC290DB88E0022A437 /* MainContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD802EB290DB88E0022A437 /* MainContract.swift */; };
+		3FE6D0A22913FA64006B5A13 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE6D0A12913FA64006B5A13 /* Order.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -188,6 +189,7 @@
 		3FD802E5290DB7DF0022A437 /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
 		3FD802E7290DB7F00022A437 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 		3FD802EB290DB88E0022A437 /* MainContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContract.swift; sourceTree = "<group>"; };
+		3FE6D0A12913FA64006B5A13 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +239,7 @@
 				3F464BB8290D52F10007FAC9 /* User.swift */,
 				3FCC71FE290EAB0C00685D2B /* Products.swift */,
 				3F862B99291110D700B9C902 /* Basket.swift */,
+				3FE6D0A12913FA64006B5A13 /* Order.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -729,6 +732,7 @@
 				3F862BC72912841A00B9C902 /* BasketViewController.swift in Sources */,
 				3FD802EC290DB88E0022A437 /* MainContract.swift in Sources */,
 				3FD802D8290D726F0022A437 /* MainTabBarController.swift in Sources */,
+				3FE6D0A22913FA64006B5A13 /* Order.swift in Sources */,
 				3FCC71F6290EAAC600685D2B /* SplashViewController.swift in Sources */,
 				3F862BCC2912CBE100B9C902 /* BasketPresenter.swift in Sources */,
 				3FAE6417290FE68400DA253D /* ProductDetailRouter.swift in Sources */,

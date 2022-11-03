@@ -17,7 +17,8 @@ final class BasketTableViewCell: UITableViewCell {
                   let imageUrl = basket.image,
                   let title = basket.title,
                   let price = basket.price,
-                  let stepperValue = basket.piece else {
+                  let stepperValue = basket.piece,
+                  let totalPrice = basket.totalPrice else {
                 return
             }
             guard let url = URL(string: imageUrl) else {
@@ -25,7 +26,7 @@ final class BasketTableViewCell: UITableViewCell {
             }
             productImageView.kf.setImage(with: url)
             productTitleLabel.text = "\(title)"
-            productPriceLabel.text = "\(price.priceFormatted)"
+            productPriceLabel.text = "\(totalPrice.priceFormatted)"
             stepper.value = Double(stepperValue)
             stepperLabel.text = "\(stepperValue)"
             

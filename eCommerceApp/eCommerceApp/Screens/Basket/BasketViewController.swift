@@ -31,14 +31,18 @@ final class BasketViewController: UIViewController, AlertPresentable {
 //MARK: - BasketViewDelegate
 extension BasketViewController: BasketViewDelegate {
     func didTapBuyButton() {
-        
+        showAlert(title: "Pay",
+                  message: "Do you want to complete the purchase?",
+                  cancelButtonTitle: "Cancel") { _ in
+            self.presenter.buyBasket()
+        }
     }
 }
 
 //MARK: - BasketTableViewCellDelegate
 extension BasketViewController: BasketTableViewCellDelegate {
     func didTapStepper(_ basket: Basket?, piece: Double?) {
-        
+        presenter.updateBasket(basket, piece: piece)
     }
     
     func didTapDeleteButton(_ basket: Basket?) {
@@ -60,8 +64,14 @@ extension BasketViewController: PresenterToViewBasketProtocol {
         basketView.reloadTableView()
     }
     
+    func didGetTotalPrice(_ totalPrice: Double) {
+        basketView.reloadTotalPrice(totalPrice)
+    }
+    
     func didBuyBasket() {
-        
+        showAlert(title: "Success", message: "Your order has been received. We thank you.") { _ in
+            self.presenter.router?.dismiss(on: self.presenter.view!)
+        }
     }
 }
 

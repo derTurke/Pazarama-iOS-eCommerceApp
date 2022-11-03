@@ -11,6 +11,7 @@ import UIKit
 protocol PresenterToViewBasketProtocol: AnyObject {
     func didErrorOccurred(_ error: Error)
     func didGetBasket()
+    func didGetTotalPrice(_ totalPrice: Double)
     func didBuyBasket()
 }
 
@@ -24,7 +25,7 @@ protocol ViewToPresenterBasketProtocol {
     var numberOfRowsInSection: Int { get set }
     
     func getBasket()
-    func updateBasket(_ basket: Basket?)
+    func updateBasket(_ basket: Basket?, piece: Double?)
     func buyBasket()
     func deleteProduct(_ basket: Basket?)
     func productForIndexPath(_ indexPath: IndexPath) -> Basket?
@@ -34,10 +35,14 @@ protocol ViewToPresenterBasketProtocol {
 // MARK: Interactor Input (Presenter -> Interactor)
 protocol PresenterToInteractorBasketProtocol {
     var presenter: InteractorToPresenterBasketProtocol? { get set }
-    
+    var totalPrice: Double? { get set }
     func fetchBasket()
-    func updateBasket(_ basket: Basket?)
+    func calcTotalPrice(with baskets: [Basket]?)
+    func updateBasket(_ basket: Basket?, piece: Double?)
     func paymentBasket()
+    func deleteBasketsInFirestore(_ basket: Basket?)
+//    MARK: - ADD TO ORDER
+//    func basketAddToOrderFirestore(_ orders: [Order]?)
     func deleteProductInBasket(_ basket: Basket?)
 }
 
@@ -45,6 +50,7 @@ protocol PresenterToInteractorBasketProtocol {
 protocol InteractorToPresenterBasketProtocol: AnyObject {
     func didErrorOccurred(_ error: Error)
     func didFetchBasket(_ baskets: [Basket]?)
+    func didFetchTotalPrice(_ totalPrice: Double?)
     func didPaymentBasket()
 }
 

@@ -8,8 +8,6 @@
 import UIKit
 
 final class BasketPresenter: ViewToPresenterBasketProtocol {
-    
-    
     weak var view: PresenterToViewBasketProtocol?
     var interactor: PresenterToInteractorBasketProtocol?
     var router: PresenterToRouterBasketProtocol?
@@ -26,12 +24,12 @@ final class BasketPresenter: ViewToPresenterBasketProtocol {
         interactor?.fetchBasket()
     }
     
-    func updateBasket(_ basket: Basket?) {
-        interactor?.updateBasket(basket)
+    func updateBasket(_ basket: Basket?, piece: Double?) {
+        interactor?.updateBasket(basket, piece: piece)
     }
     
     func buyBasket() {
-        
+        interactor?.paymentBasket()
     }
     
     func deleteProduct(_ basket: Basket?) {
@@ -57,7 +55,12 @@ extension BasketPresenter: InteractorToPresenterBasketProtocol {
         view?.didGetBasket()
     }
     
+    func didFetchTotalPrice(_ totalPrice: Double?) {
+        guard let totalPrice = totalPrice else { return }
+        view?.didGetTotalPrice(totalPrice)
+    }
+    
     func didPaymentBasket() {
-        
+        view?.didBuyBasket()
     }
 }

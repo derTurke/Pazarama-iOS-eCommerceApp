@@ -148,4 +148,8 @@ final class BasketView: UIView {
         tableView.reloadData()
     }
     
+    func reloadTotalPrice(_ totalPrice: Double) {
+        totalPriceLabel.text = "\(totalPrice.priceFormatted)"
+    }
+    
 }

@@ -1,23 +1,24 @@
 //
-//  Basket.swift
+//  Order.swift
 //  eCommerceApp
 //
-//  Created by GÜRHAN YUVARLAK on 1.11.2022.
+//  Created by GÜRHAN YUVARLAK on 3.11.2022.
 //
 
 import Foundation
 
-struct Basket: Codable {
-    var id: String?
-    var productId: Int?
-    var title: String?
-    var image: String?
-    var piece: Int?
-    var price: Double?
-    var totalPrice: Double?
+struct Order: Codable {
+    let id: String?
+    let productId: Int?
+    let title: String?
+    let image: String?
+    let piece: Int?
+    let price: Double?
+    let totalPrice: Double?
+    let orderDate: Date?
 }
 
-extension Basket {
+extension Order {
     init(from dict: [String: Any]) {
         id = dict["id"] as? String
         productId = dict["productId"] as? Int
@@ -26,5 +27,6 @@ extension Basket {
         piece = dict["piece"] as? Int
         price = dict["price"] as? Double
         totalPrice = dict["totalPrice"] as? Double
+        orderDate = dict["orderDate"] as? Date
     }
 }
