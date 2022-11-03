@@ -75,7 +75,7 @@ final class MainTabBarController: UITabBarController, AlertPresentable {
                                        tabBarSelectedImage: nil,
                                        barButtonItem: barButtonItem)
         //Profile View Tab
-        let nav3 = setupViewController(with: UIViewController(),
+        let nav3 = setupViewController(with: ProfileViewController(),
                                        tabBarTitle: "Profile",
                                        tabBarImage: UIImage(named: "user")!,
                                        tabBarSelectedImage: nil,

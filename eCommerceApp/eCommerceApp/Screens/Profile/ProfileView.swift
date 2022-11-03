@@ -9,12 +9,22 @@ import UIKit
 
 final class ProfileView: UIView {
     //MARK: - Properties
+    weak var delegate: ProfileViewDelegate?
+    var user: User? {
+        didSet {
+            guard let user = user else { return }
+            usernameLabel.text = user.username
+            emailLabel.text = user.email
+        }
+    }
+    
     private let informationStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.spacing = 8
         return stackView
     }()
+    
     private let usernameLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "Helvetica-bold", size: 18)
@@ -23,6 +33,7 @@ final class ProfileView: UIView {
         label.lineBreakMode = .byWordWrapping
         return label
     }()
+    
     private let emailLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "Helvetica-bold", size: 18)
@@ -38,10 +49,6 @@ final class ProfileView: UIView {
         button.tintColor = .white
         button.backgroundColor = UIColor(named: "primary")
         button.layer.cornerRadius = 12
-        button.layer.masksToBounds = false
-        button.layer.shadowColor = UIColor.black.cgColor
-        button.layer.shadowOpacity = 0.25
-        button.layer.shadowRadius = 12
         button.addTarget(self, action: #selector(didTapSignOut), for: .touchUpInside)
         return button
     }()
@@ -75,14 +82,15 @@ final class ProfileView: UIView {
         addSubview(signOutButton)
         signOutButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            signOutButton.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            signOutButton.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -16.0),
             signOutButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16.0),
-            signOutButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16.0)
+            signOutButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16.0),
+            signOutButton.heightAnchor.constraint(equalToConstant: 50.0)
         ])
     }
     
     
     @objc private func didTapSignOut() {
-        
+        delegate?.signOut()
     }
 }
