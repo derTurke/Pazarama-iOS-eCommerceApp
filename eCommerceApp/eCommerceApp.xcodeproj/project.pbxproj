@@ -75,6 +75,8 @@
 		3FD802E8290DB7F00022A437 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD802E7290DB7F00022A437 /* MainRouter.swift */; };
 		3FD802EC290DB88E0022A437 /* MainContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD802EB290DB88E0022A437 /* MainContract.swift */; };
 		3FE6D0A22913FA64006B5A13 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE6D0A12913FA64006B5A13 /* Order.swift */; };
+		3FE6D0AD29142806006B5A13 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE6D0AC29142806006B5A13 /* ProfileView.swift */; };
+		3FE6D0AF2914284B006B5A13 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE6D0AE2914284B006B5A13 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -190,6 +192,8 @@
 		3FD802E7290DB7F00022A437 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 		3FD802EB290DB88E0022A437 /* MainContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContract.swift; sourceTree = "<group>"; };
 		3FE6D0A12913FA64006B5A13 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		3FE6D0AC29142806006B5A13 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		3FE6D0AE2914284B006B5A13 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -343,6 +347,7 @@
 			isa = PBXGroup;
 			children = (
 				3F862B98291110C300B9C902 /* Entity */,
+				3FE6D0A9291427DE006B5A13 /* Profile */,
 				3F862BC3291283F800B9C902 /* Basket */,
 				3F862BA5291166C800B9C902 /* Search */,
 				3FAE640A290FDF9100DA253D /* ProductDetail */,
@@ -529,6 +534,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		3FE6D0A9291427DE006B5A13 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				3FE6D0AC29142806006B5A13 /* ProfileView.swift */,
+				3FE6D0AE2914284B006B5A13 /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -704,6 +718,7 @@
 				3F862B9A291110D700B9C902 /* Basket.swift in Sources */,
 				3F9CB7A6290AC9FE00D21403 /* CustomOnboardingView.swift in Sources */,
 				3F862BAD2911670200B9C902 /* SearchInteractor.swift in Sources */,
+				3FE6D0AF2914284B006B5A13 /* ProfileViewController.swift in Sources */,
 				3FCC71F4290EAAB200685D2B /* SplashView.swift in Sources */,
 				3F9CB7BB290AD70A00D21403 /* SignInView.swift in Sources */,
 				3F9CB7A2290AC91200D21403 /* OnboardingView.swift in Sources */,
@@ -735,6 +750,7 @@
 				3FE6D0A22913FA64006B5A13 /* Order.swift in Sources */,
 				3FCC71F6290EAAC600685D2B /* SplashViewController.swift in Sources */,
 				3F862BCC2912CBE100B9C902 /* BasketPresenter.swift in Sources */,
+				3FE6D0AD29142806006B5A13 /* ProfileView.swift in Sources */,
 				3FAE6417290FE68400DA253D /* ProductDetailRouter.swift in Sources */,
 				3F464BBB290D556C0007FAC9 /* ErrorHandling.swift in Sources */,
 				3FD802E4290DB7D50022A437 /* MainPresenter.swift in Sources */,
