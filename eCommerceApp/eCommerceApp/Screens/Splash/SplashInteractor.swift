@@ -27,6 +27,7 @@ final class SplashInteractor: PresenterToInteractorSplashProtocol {
                     do {
                         let products = try JSONDecoder().decode([Products].self, from: response.data)
                         self.addProductsToFirebaseFirestore(products)
+                        self.addCategoriesToFirebaseFirestore(products)
                         self.presenter?.didFetchProducts()
                     } catch {
                         self.presenter?.didErrorOccurred(error)
@@ -56,6 +57,27 @@ final class SplashInteractor: PresenterToInteractorSplashProtocol {
             }
         }
         
+    }
+    
+    func addCategoriesToFirebaseFirestore(_ products: [Products]?) {
+        guard let products = products else {
+            return
+        }
+        for product in products {
+            guard let productCategory = product.category else { return }
+            let category = Category(name: productCategory.capitalized)
+            do {
+                guard let data = try category.dictionary else { return }
+                self.db.collection("categories").document(productCategory).setData(data) { error in
+                    if let error {
+                        self.presenter?.didErrorOccurred(error)
+                        return
+                    }
+                }
+            } catch {
+                self.presenter?.didErrorOccurred(error)
+            }
+        }
     }
     
     func fetchUserDefaults() {

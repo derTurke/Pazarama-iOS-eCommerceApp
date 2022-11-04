@@ -31,6 +31,7 @@ protocol PresenterToInteractorSplashProtocol {
     
     func fetchProducts()
     func addProductsToFirebaseFirestore(_ products: [Products]?)
+    func addCategoriesToFirebaseFirestore(_ products: [Products]?)
     func fetchUserDefaults()
 }
 

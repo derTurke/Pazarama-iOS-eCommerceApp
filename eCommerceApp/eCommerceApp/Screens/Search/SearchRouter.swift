@@ -20,5 +20,12 @@ final class SearchRouter: PresenterToRouterSearchProtocol {
         return viewController
     }
     
+    func pushToProductDetail(on view: PresenterToViewSearchProtocol, with product: Products) {
+        let productDetailViewController = ProductDetailRouter.createModule(product)
+        productDetailViewController.modalPresentationStyle = .fullScreen
+        productDetailViewController.modalTransitionStyle = .crossDissolve
+        let viewController = view as! SearchViewController
+        viewController.present(productDetailViewController, animated: true)
+    }
     
 }
