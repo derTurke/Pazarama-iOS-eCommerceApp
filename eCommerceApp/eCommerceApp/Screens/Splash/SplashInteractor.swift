@@ -27,7 +27,6 @@ final class SplashInteractor: PresenterToInteractorSplashProtocol {
                     do {
                         let products = try JSONDecoder().decode([Products].self, from: response.data)
                         self.addProductsToFirebaseFirestore(products)
-                        self.addCategoriesToFirebaseFirestore(products)
                         self.presenter?.didFetchProducts()
                     } catch {
                         self.presenter?.didErrorOccurred(error)
@@ -56,19 +55,38 @@ final class SplashInteractor: PresenterToInteractorSplashProtocol {
                 self.presenter?.didErrorOccurred(error)
             }
         }
-        
+
     }
     
-    func addCategoriesToFirebaseFirestore(_ products: [Products]?) {
-        guard let products = products else {
+    func fetchCategories() {
+        fakeStoreProvider.request(.getCategories) { result in
+            switch result {
+                case .success(let response):
+                    do {
+                        let data = try JSONDecoder().decode([String].self, from: response.data)
+                        var categories = [Category]()
+                        for category in data {
+                            categories.append(Category(name: category.capitalized))
+                        }
+                        self.addCategoriesToFirebaseFirestore(categories)
+                    } catch {
+                        self.presenter?.didErrorOccurred(error)
+                    }
+                case .failure(let error):
+                    self.presenter?.didErrorOccurred(error)
+            }
+        }
+    }
+    
+    func addCategoriesToFirebaseFirestore(_ categories: [Category]?) {
+        guard let categories = categories else {
             return
         }
-        for product in products {
-            guard let productCategory = product.category else { return }
-            let category = Category(name: productCategory.capitalized)
+        for category in categories {
+            guard let categoryName = category.name else { return }
             do {
                 guard let data = try category.dictionary else { return }
-                self.db.collection("categories").document(productCategory).setData(data) { error in
+                self.db.collection("categories").document(categoryName).setData(data) { error in
                     if let error {
                         self.presenter?.didErrorOccurred(error)
                         return
