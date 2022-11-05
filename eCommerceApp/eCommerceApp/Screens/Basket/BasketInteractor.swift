@@ -99,19 +99,13 @@ final class BasketInteractor: PresenterToInteractorBasketProtocol {
             guard let documents = querySnapshot?.documents else {
                 return
             }
-//            var orders = [Order]()
             for document in documents {
                 var data = document.data()
                 data["id"] = document.documentID
                 self.deleteBasketsInFirestore(Basket(from: data))
-//                data["orderDate"] = Date()
-//                orders.append(Order(from: data))
             }
             self.notificationCenter.post(name: .getBasketTotalPrice, object: nil)
             self.presenter?.didPaymentBasket()
-//            MARK: - ADD TO ORDER
-//            self.basketAddToOrderFirestore(orders)
-            
         }
     }
     
@@ -128,29 +122,6 @@ final class BasketInteractor: PresenterToInteractorBasketProtocol {
             }
         }
     }
-    
-//    MARK: - ADD TO ORDER
-//    func basketAddToOrderFirestore(_ orders: [Order]?) {
-//        guard let orders = orders,
-//              let uid = defaults.string(forKey: "uid") else {
-//            return
-//        }
-//        do {
-//            for order in orders {
-//                guard let data = try order.dictionary else { return }
-//                db.collection("orders").document(uid).collection("order").document().collection("products").addDocument(data: data){ error in
-//                    if let error {
-//                        self.presenter?.didErrorOccurred(error)
-//                        return
-//                    }
-//                }
-//            }
-//            self.notificationCenter.post(name: .getBasketTotalPrice, object: nil)
-//            self.presenter?.didPaymentBasket()
-//        } catch {
-//            self.presenter?.didErrorOccurred(error)
-//        }
-//    }
     
     func deleteProductInBasket(_ basket: Basket?) {
         guard let uid = defaults.string(forKey: "uid"),

@@ -21,7 +21,7 @@ final class SplashRouter: PresenterToRouterSplashProtocol {
         return viewController
     }
     
-    func pushToProductDetail(on view: PresenterToViewSplashProtocol, with pushViewController: UIViewController) {
+    func pushToView(on view: PresenterToViewSplashProtocol, with pushViewController: UIViewController) {
         let viewController = view as! SplashViewController
         viewController.navigationController?.pushViewController(pushViewController, animated: true)
     }

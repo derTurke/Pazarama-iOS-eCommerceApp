@@ -37,6 +37,6 @@ extension SplashPresenter: InteractorToPresenterSplashProtocol {
     }
     func didFetchUserDefaults(with viewController: UIViewController) {
         view?.didGetUserDefaults()
-        router?.pushToProductDetail(on: view!, with: viewController)
+        router?.pushToView(on: view!, with: viewController)
     }
 }

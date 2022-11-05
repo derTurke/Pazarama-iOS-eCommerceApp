@@ -47,5 +47,5 @@ protocol InteractorToPresenterSplashProtocol: AnyObject {
 // MARK: Router Input (Presenter -> Router)
 protocol PresenterToRouterSplashProtocol {
     static func createModule() -> UIViewController
-    func pushToProductDetail(on view: PresenterToViewSplashProtocol, with pushViewController: UIViewController)
+    func pushToView(on view: PresenterToViewSplashProtocol, with pushViewController: UIViewController)
 }

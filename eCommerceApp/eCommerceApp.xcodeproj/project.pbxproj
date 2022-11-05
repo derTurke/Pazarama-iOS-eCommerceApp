@@ -19,7 +19,6 @@
 		3F862BAD2911670200B9C902 /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F862BAC2911670200B9C902 /* SearchInteractor.swift */; };
 		3F862BAF2911671200B9C902 /* SearchContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F862BAE2911671200B9C902 /* SearchContract.swift */; };
 		3F862BB12911671A00B9C902 /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F862BB02911671A00B9C902 /* SearchRouter.swift */; };
-		3F862BBC2911B31800B9C902 /* MainTabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F862BBB2911B31800B9C902 /* MainTabBarViewModel.swift */; };
 		3F862BC22911B53700B9C902 /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F862BC12911B53700B9C902 /* Notification+Extension.swift */; };
 		3F862BC52912840D00B9C902 /* BasketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F862BC42912840D00B9C902 /* BasketView.swift */; };
 		3F862BC72912841A00B9C902 /* BasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F862BC62912841A00B9C902 /* BasketViewController.swift */; };
@@ -63,6 +62,10 @@
 		3FCC6D0929166C0900CAAED2 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC6D0829166C0900CAAED2 /* ProfilePresenter.swift */; };
 		3FCC6D0D29166C1100CAAED2 /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC6D0C29166C1100CAAED2 /* ProfileInteractor.swift */; };
 		3FCC6D0F29166C1900CAAED2 /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC6D0E29166C1900CAAED2 /* ProfileRouter.swift */; };
+		3FCC6D1329168F5200CAAED2 /* MainTabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC6D1229168F5200CAAED2 /* MainTabBarPresenter.swift */; };
+		3FCC6D1729168F5E00CAAED2 /* MainTabBarInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC6D1629168F5E00CAAED2 /* MainTabBarInteractor.swift */; };
+		3FCC6D1929168F6800CAAED2 /* MainTabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC6D1829168F6800CAAED2 /* MainTabBarRouter.swift */; };
+		3FCC6D1B29168F7400CAAED2 /* MainTabBarContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC6D1A29168F7400CAAED2 /* MainTabBarContract.swift */; };
 		3FCC71F4290EAAB200685D2B /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC71F3290EAAB200685D2B /* SplashView.swift */; };
 		3FCC71F6290EAAC600685D2B /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC71F5290EAAC600685D2B /* SplashViewController.swift */; };
 		3FCC71F9290EAADA00685D2B /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC71F8290EAADA00685D2B /* SplashPresenter.swift */; };
@@ -142,7 +145,6 @@
 		3F862BAC2911670200B9C902 /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
 		3F862BAE2911671200B9C902 /* SearchContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchContract.swift; sourceTree = "<group>"; };
 		3F862BB02911671A00B9C902 /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
-		3F862BBB2911B31800B9C902 /* MainTabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewModel.swift; sourceTree = "<group>"; };
 		3F862BC12911B53700B9C902 /* Notification+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extension.swift"; sourceTree = "<group>"; };
 		3F862BC42912840D00B9C902 /* BasketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketView.swift; sourceTree = "<group>"; };
 		3F862BC62912841A00B9C902 /* BasketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewController.swift; sourceTree = "<group>"; };
@@ -186,6 +188,10 @@
 		3FCC6D0829166C0900CAAED2 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		3FCC6D0C29166C1100CAAED2 /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
 		3FCC6D0E29166C1900CAAED2 /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
+		3FCC6D1229168F5200CAAED2 /* MainTabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarPresenter.swift; sourceTree = "<group>"; };
+		3FCC6D1629168F5E00CAAED2 /* MainTabBarInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarInteractor.swift; sourceTree = "<group>"; };
+		3FCC6D1829168F6800CAAED2 /* MainTabBarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarRouter.swift; sourceTree = "<group>"; };
+		3FCC6D1A29168F7400CAAED2 /* MainTabBarContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarContract.swift; sourceTree = "<group>"; };
 		3FCC71F3290EAAB200685D2B /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		3FCC71F5290EAAC600685D2B /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		3FCC71F8290EAADA00685D2B /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
@@ -518,7 +524,10 @@
 			isa = PBXGroup;
 			children = (
 				3FD802D7290D726F0022A437 /* MainTabBarController.swift */,
-				3F862BBB2911B31800B9C902 /* MainTabBarViewModel.swift */,
+				3FCC6D1229168F5200CAAED2 /* MainTabBarPresenter.swift */,
+				3FCC6D1629168F5E00CAAED2 /* MainTabBarInteractor.swift */,
+				3FCC6D1829168F6800CAAED2 /* MainTabBarRouter.swift */,
+				3FCC6D1A29168F7400CAAED2 /* MainTabBarContract.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -725,6 +734,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F862BD02912CBF900B9C902 /* BasketRouter.swift in Sources */,
+				3FCC6D1729168F5E00CAAED2 /* MainTabBarInteractor.swift in Sources */,
 				3FAE640F290FDFAA00DA253D /* ProductDetailViewController.swift in Sources */,
 				3FAE6411290FDFBA00DA253D /* ProductDetailView.swift in Sources */,
 				3F862BCE2912CBEB00B9C902 /* BasketInteractor.swift in Sources */,
@@ -741,10 +751,10 @@
 				3F862BD22912CC0700B9C902 /* BasketContract.swift in Sources */,
 				3F862BA9291166F100B9C902 /* SearchViewController.swift in Sources */,
 				3FD802E6290DB7DF0022A437 /* MainInteractor.swift in Sources */,
-				3F862BBC2911B31800B9C902 /* MainTabBarViewModel.swift in Sources */,
 				3FCC71FD290EAB0300685D2B /* SplashRouter.swift in Sources */,
 				3FD802E2290DA9E40022A437 /* MainView.swift in Sources */,
 				3FCC71F9290EAADA00685D2B /* SplashPresenter.swift in Sources */,
+				3FCC6D1B29168F7400CAAED2 /* MainTabBarContract.swift in Sources */,
 				3F862BC22911B53700B9C902 /* Notification+Extension.swift in Sources */,
 				3FCC6D0D29166C1100CAAED2 /* ProfileInteractor.swift in Sources */,
 				3F9CB7C1290AEF4F00D21403 /* AuthInteractor.swift in Sources */,
@@ -777,6 +787,7 @@
 				3FCC7201290EAB1B00685D2B /* SplashContract.swift in Sources */,
 				3F9CB73F290ABF9800D21403 /* AppDelegate.swift in Sources */,
 				3F862B9C291125DE00B9C902 /* Double+Extensions.swift in Sources */,
+				3FCC6D1329168F5200CAAED2 /* MainTabBarPresenter.swift in Sources */,
 				3F9CB7CB290AFC3B00D21403 /* AlertPresentable.swift in Sources */,
 				3F862BCA2912925300B9C902 /* BasketTableViewCell.swift in Sources */,
 				3F862BA7291166DE00B9C902 /* SearchView.swift in Sources */,
@@ -785,6 +796,7 @@
 				3F9CB7C3290AF06A00D21403 /* AuthContract.swift in Sources */,
 				3F464BB9290D52F10007FAC9 /* User.swift in Sources */,
 				3FCC71FF290EAB0C00685D2B /* Products.swift in Sources */,
+				3FCC6D1929168F6800CAAED2 /* MainTabBarRouter.swift in Sources */,
 				3F862BAF2911671200B9C902 /* SearchContract.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

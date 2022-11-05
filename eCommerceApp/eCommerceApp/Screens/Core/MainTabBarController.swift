@@ -10,6 +10,8 @@ import FirebaseFirestore
 
 final class MainTabBarController: UITabBarController, AlertPresentable {
     //MARK: - Properties
+    var presenter: ViewToPresenterMainTabBarProtocol!
+    
     private let button: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(named: "basket"), for: .normal)
@@ -19,50 +21,49 @@ final class MainTabBarController: UITabBarController, AlertPresentable {
         button.addTarget(self, action: #selector(didTapBasket), for: .touchUpInside)
         return button
     }()
-    
     private let barButtonItem = UIBarButtonItem()
-
-    private let viewModel: MainTabBarViewModel
-    
-    //MARK: - Init
-    init(viewModel: MainTabBarViewModel) {
-        self.viewModel = viewModel
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
     
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.delegate = self
-        getTotalPrice()
+        setupView()
+        getBasketTotalPriceNotification()
+    }
+    //MARK: - Methods
+    private func getBasketTotalPriceNotification() {
         let notificationCenter: NotificationCenter = NotificationCenter.default
         notificationCenter.addObserver(self, selector: #selector(getTotalPrice), name: .getBasketTotalPrice, object: nil)
-        setupView()
     }
     
-    //MARK: - Methods
     @objc private func getTotalPrice() {
-        viewModel.fetchBasketTotalPrice()
-        
+        presenter?.getBasketTotalPrice()
     }
     
     @objc private func didTapBasket() {
-        let basketNavigationController = UINavigationController(rootViewController: BasketRouter.createModule())
-        present(basketNavigationController, animated: true)
+        presenter?.presentBasket()
     }
     
+}
+
+//MARK: - PresenterToViewMainTabBarProtocol
+extension MainTabBarController: PresenterToViewMainTabBarProtocol {
+    func didErrorOccurred(_ error: Error) {
+        showError(error)
+    }
+    
+    func didGetBasketTotalPrice(_ totalPrice: Double) {
+        button.setTitle("\(totalPrice.priceFormatted)", for: .normal)
+    }
+}
+
+extension MainTabBarController {
     private func setupView() {
         barButtonItem.customView = button
-        tabBarConfigure()
         setupTabBarController()
     }
     
-    func setupTabBarController() {
-        //Recent View Tab
+    private func setupTabBarController() {
+        //Products View Tab
         let nav1 = setupViewController(with: MainRouter.createModule(),
                                        tabBarTitle: "Home",
                                        tabBarImage: UIImage(named: "home")!,
@@ -84,7 +85,7 @@ final class MainTabBarController: UITabBarController, AlertPresentable {
         setViewControllers([nav1, nav2, nav3], animated: true)
     }
     
-    func setupViewController(with viewController: UIViewController,
+    private func setupViewController(with viewController: UIViewController,
                              tabBarTitle: String,
                              tabBarImage: UIImage,
                              tabBarSelectedImage: UIImage?,
@@ -97,24 +98,5 @@ final class MainTabBarController: UITabBarController, AlertPresentable {
         viewController.navigationItem.rightBarButtonItem = barButtonItem
         
         return UINavigationController(rootViewController: viewController)
-    }
-    
-    private func tabBarConfigure() {
-        UITabBar.appearance().tintColor = UIColor(named: "primary")
-        UITabBar.appearance().backgroundColor = UIColor(named: "background-2")
-        UITabBar.appearance().barTintColor = UIColor(named: "background-2")
-        UINavigationBar.appearance().barTintColor = UIColor(named: "background")
-    }
-    
-}
-
-//MARK: - MainTabBarDelegate
-extension  MainTabBarController: MainTabBarDelegate {
-    func didErrorOccurred(_ error: Error) {
-        showError(error)
-    }
-    
-    func didFetchTotalPrice(_ totalPrice: Double) {
-        button.setTitle("\(totalPrice.priceFormatted)", for: .normal)
     }
 }

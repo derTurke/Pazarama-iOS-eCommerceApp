@@ -41,8 +41,6 @@ protocol PresenterToInteractorBasketProtocol {
     func updateBasket(_ basket: Basket?, piece: Double?)
     func paymentBasket()
     func deleteBasketsInFirestore(_ basket: Basket?)
-//    MARK: - ADD TO ORDER
-//    func basketAddToOrderFirestore(_ orders: [Order]?)
     func deleteProductInBasket(_ basket: Basket?)
 }
 

@@ -2,29 +2,14 @@
 //  MainTabBarInteractor.swift
 //  eCommerceApp
 //
-//  Created by GÜRHAN YUVARLAK on 1.11.2022.
+//  Created by GÜRHAN YUVARLAK on 5.11.2022.
 //
 
 import Foundation
 import FirebaseFirestore
 
-protocol MainTabBarDelegate: AnyObject {
-    func didErrorOccurred(_ error: Error)
-    func didFetchTotalPrice(_ totalPrice: Double)
-}
-
-final class MainTabBarViewModel {
-    
-    weak var delegate: MainTabBarDelegate?
-    
-    var totalPrice: Double? {
-        didSet {
-            guard let totalPrice = totalPrice else {
-                return
-            }
-            delegate?.didFetchTotalPrice(totalPrice)
-        }
-    }
+final class MainTabBarInteractor: PresenterToInteractorMainTabBarProtocol {
+    weak var presenter: InteractorToPresenterMainTabBarProtocol?
     
     private let db = Firestore.firestore()
     private let defaults = UserDefaults.standard
@@ -35,7 +20,7 @@ final class MainTabBarViewModel {
         }
         db.collection("baskets").document("users").collection(uid).getDocuments() { querySnapshot, error in
             if let error {
-                self.delegate?.didErrorOccurred(error)
+                self.presenter?.didErrorOccurred(error)
                 return
             }
             guard let documents = querySnapshot?.documents else {
@@ -50,7 +35,7 @@ final class MainTabBarViewModel {
         }
     }
     
-    private func calcTotalPrice(with baskets: [Basket]?) {
+    func calcTotalPrice(with baskets: [Basket]?) {
         guard let baskets = baskets else {
             return
         }
@@ -59,10 +44,9 @@ final class MainTabBarViewModel {
             price += basket.totalPrice ?? 0.0
         }
         if price == 0.0 {
-            totalPrice = 0.0
+            presenter?.didFetchBasketTotalPrice(0.0)
         } else {
-            totalPrice = price
+            presenter?.didFetchBasketTotalPrice(price)
         }
     }
-    
 }
