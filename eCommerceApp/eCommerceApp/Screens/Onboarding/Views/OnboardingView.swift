@@ -8,6 +8,7 @@
 import UIKit
 
 final class OnboardingView: UIView {
+    //MARK: - Properties
     weak var delegate: OnboardingViewDelegate?
     
     let scrollView: UIScrollView = {
