@@ -60,6 +60,9 @@
 		3FAE6417290FE68400DA253D /* ProductDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE6416290FE68400DA253D /* ProductDetailRouter.swift */; };
 		3FAE6419290FE6BB00DA253D /* ProductDetailContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE6418290FE6BB00DA253D /* ProductDetailContract.swift */; };
 		3FCC6D012915ADD500CAAED2 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC6D002915ADD500CAAED2 /* Category.swift */; };
+		3FCC6D0929166C0900CAAED2 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC6D0829166C0900CAAED2 /* ProfilePresenter.swift */; };
+		3FCC6D0D29166C1100CAAED2 /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC6D0C29166C1100CAAED2 /* ProfileInteractor.swift */; };
+		3FCC6D0F29166C1900CAAED2 /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC6D0E29166C1900CAAED2 /* ProfileRouter.swift */; };
 		3FCC71F4290EAAB200685D2B /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC71F3290EAAB200685D2B /* SplashView.swift */; };
 		3FCC71F6290EAAC600685D2B /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC71F5290EAAC600685D2B /* SplashViewController.swift */; };
 		3FCC71F9290EAADA00685D2B /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC71F8290EAADA00685D2B /* SplashPresenter.swift */; };
@@ -180,6 +183,9 @@
 		3FAE6416290FE68400DA253D /* ProductDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailRouter.swift; sourceTree = "<group>"; };
 		3FAE6418290FE6BB00DA253D /* ProductDetailContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailContract.swift; sourceTree = "<group>"; };
 		3FCC6D002915ADD500CAAED2 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		3FCC6D0829166C0900CAAED2 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		3FCC6D0C29166C1100CAAED2 /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
+		3FCC6D0E29166C1900CAAED2 /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
 		3FCC71F3290EAAB200685D2B /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		3FCC71F5290EAAC600685D2B /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		3FCC71F8290EAADA00685D2B /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
@@ -544,6 +550,9 @@
 			children = (
 				3FE6D0AC29142806006B5A13 /* ProfileView.swift */,
 				3FE6D0AE2914284B006B5A13 /* ProfileViewController.swift */,
+				3FCC6D0829166C0900CAAED2 /* ProfilePresenter.swift */,
+				3FCC6D0C29166C1100CAAED2 /* ProfileInteractor.swift */,
+				3FCC6D0E29166C1900CAAED2 /* ProfileRouter.swift */,
 				3F7A01B629142EFF006F7E29 /* ProfileContract.swift */,
 			);
 			path = Profile;
@@ -737,6 +746,7 @@
 				3FD802E2290DA9E40022A437 /* MainView.swift in Sources */,
 				3FCC71F9290EAADA00685D2B /* SplashPresenter.swift in Sources */,
 				3F862BC22911B53700B9C902 /* Notification+Extension.swift in Sources */,
+				3FCC6D0D29166C1100CAAED2 /* ProfileInteractor.swift in Sources */,
 				3F9CB7C1290AEF4F00D21403 /* AuthInteractor.swift in Sources */,
 				3F9CB7B3290ACFDC00D21403 /* AuthViewController.swift in Sources */,
 				3FD802E8290DB7F00022A437 /* MainRouter.swift in Sources */,
@@ -748,11 +758,13 @@
 				3F9CB7A0290AC8F400D21403 /* OnboardingViewController.swift in Sources */,
 				3F862BB12911671A00B9C902 /* SearchRouter.swift in Sources */,
 				3FCC71FB290EAAE400685D2B /* SplashInteractor.swift in Sources */,
+				3FCC6D0F29166C1900CAAED2 /* ProfileRouter.swift in Sources */,
 				3FA2CD47291309900040B6AB /* DimmedPresentable.swift in Sources */,
 				3FD802E0290D8E5F0022A437 /* MainCollectionViewCell.swift in Sources */,
 				3F9CB7C7290AF1DA00D21403 /* AuthRouter.swift in Sources */,
 				3F862BC72912841A00B9C902 /* BasketViewController.swift in Sources */,
 				3FD802EC290DB88E0022A437 /* MainContract.swift in Sources */,
+				3FCC6D0929166C0900CAAED2 /* ProfilePresenter.swift in Sources */,
 				3FD802D8290D726F0022A437 /* MainTabBarController.swift in Sources */,
 				3FE6D0A22913FA64006B5A13 /* Order.swift in Sources */,
 				3FCC6D012915ADD500CAAED2 /* Category.swift in Sources */,
@@ -945,6 +957,7 @@
 				DEVELOPMENT_TEAM = 57W84AD39K;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = eCommerceApp/App/Plists/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Please allow access to upload profile photo.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
@@ -976,6 +989,7 @@
 				DEVELOPMENT_TEAM = 57W84AD39K;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = eCommerceApp/App/Plists/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Please allow access to upload profile photo.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIStatusBarStyle = "";

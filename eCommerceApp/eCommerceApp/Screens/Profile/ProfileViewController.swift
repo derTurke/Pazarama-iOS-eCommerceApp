@@ -9,44 +9,42 @@ import UIKit
 import FirebaseAuth
 import FirebaseFirestore
 
-final class ProfileViewController: UIViewController, AlertPresentable {
+final class ProfileViewController: UIViewController, AlertPresentable, DimmedPresentable{
     //MARK: - Properties
     private let profileView = ProfileView()
+    var presenter: ViewToPresenterProfileProtocol!
     //MARK: - Lifecycles
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Profile"
         view = profileView
         profileView.delegate = self
-        getUser()
+        getUserInformation()
+        getProfilePicture()
+        
     }
-    // MARK: - Methods
-    private func userSignOut() {
-        do {
-            try Auth.auth().signOut()
-            UserDefaults.standard.removeObject(forKey: "uid")
-            self.tabBarController?.navigationController?.pushViewController(AuthRouter.createModule(), animated: true)
-        } catch {
-            self.showError(error)
-        }
+    //MARK: - Methods
+    func getUserInformation() {
+        presenter.getUserInformation()
     }
     
-    private func getUser() {
-        let db = Firestore.firestore()
-        guard let uid = UserDefaults.standard.string(forKey: "uid") else {
-            return
-        }
-        db.collection("users").document(uid).getDocument { querySnapshot, error in
-            if let error {
-                self.showError(error)
-                return
-            }
-            guard let data = querySnapshot?.data() else {
-                return
-            }
-            print(data)
-            self.profileView.user = User(from: data)
-        }
+    func getProfilePicture() {
+        presenter.getProfilePicture()
+    }
+}
+
+//MARK: - PresenterToViewProfileProtocol
+extension ProfileViewController: PresenterToViewProfileProtocol {
+    func didErrorOccurred(_ error: Error) {
+        showError(error)
+    }
+    
+    func didGetUser(_ user: User?) {
+        profileView.user = user
+    }
+    
+    func didGetImage(_ url: URL) {
+        profileView.reloadImage(url)
     }
 }
 
@@ -54,9 +52,34 @@ final class ProfileViewController: UIViewController, AlertPresentable {
 extension ProfileViewController: ProfileViewDelegate {
     func signOut() {
         showAlert(title: "Sign Out", message: "Are you sure you want to sign out?", cancelButtonTitle: "Cancel") { _ in
-            self.userSignOut()
+            self.presenter.signOut()
         }
+    }
+    
+    func tapImageView() {
+        pickerImage()
     }
 }
 
-
+extension ProfileViewController: UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+    func pickerImage() {
+        let picker = UIImagePickerController()
+        picker.sourceType = .photoLibrary
+        picker.delegate = self
+        picker.allowsEditing = true
+        self.present(picker, animated: true)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        picker.dismiss(animated: true)
+        guard let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else {
+            return
+        }
+        presenter.saveImagePicker(image: image)
+    }
+        
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true)
+    }
+}
