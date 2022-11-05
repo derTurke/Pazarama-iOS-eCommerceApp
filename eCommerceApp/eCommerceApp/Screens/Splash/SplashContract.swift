@@ -22,6 +22,7 @@ protocol ViewToPresenterSplashProtocol {
     var router: PresenterToRouterSplashProtocol? { get set }
     
     func getProducts()
+    func getCategories()
     func getUserDefaults()
 }
 
@@ -31,6 +32,8 @@ protocol PresenterToInteractorSplashProtocol {
     
     func fetchProducts()
     func addProductsToFirebaseFirestore(_ products: [Products]?)
+    func fetchCategories()
+    func addCategoriesToFirebaseFirestore(_ categories: [Category]?)
     func fetchUserDefaults()
 }
 

@@ -75,7 +75,7 @@ final class MainTabBarController: UITabBarController, AlertPresentable {
                                        tabBarSelectedImage: nil,
                                        barButtonItem: barButtonItem)
         //Profile View Tab
-        let nav3 = setupViewController(with: ProfileViewController(),
+        let nav3 = setupViewController(with: ProfileRouter.createModule(),
                                        tabBarTitle: "Profile",
                                        tabBarImage: UIImage(named: "user")!,
                                        tabBarSelectedImage: nil,
@@ -102,6 +102,8 @@ final class MainTabBarController: UITabBarController, AlertPresentable {
     private func tabBarConfigure() {
         UITabBar.appearance().tintColor = UIColor(named: "primary")
         UITabBar.appearance().backgroundColor = UIColor(named: "background-2")
+        UITabBar.appearance().barTintColor = UIColor(named: "background-2")
+        UINavigationBar.appearance().barTintColor = UIColor(named: "background")
     }
     
 }

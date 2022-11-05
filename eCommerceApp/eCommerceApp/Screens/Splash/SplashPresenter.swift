@@ -5,7 +5,6 @@
 //  Created by GÜRHAN YUVARLAK on 30.10.2022.
 //
 
-import Foundation
 import UIKit
 
 final class SplashPresenter: ViewToPresenterSplashProtocol {
@@ -17,6 +16,10 @@ final class SplashPresenter: ViewToPresenterSplashProtocol {
     
     func getProducts() {
         interactor?.fetchProducts()
+    }
+    
+    func getCategories() {
+        interactor?.fetchCategories()
     }
     
     func getUserDefaults() {

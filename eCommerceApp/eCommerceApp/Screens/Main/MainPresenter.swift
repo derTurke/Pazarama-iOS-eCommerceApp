@@ -18,6 +18,7 @@ final class MainPresenter: ViewToPresenterMainProtocol {
     var products: [Products]? {
         didSet {
             numberOfItemsInSection = products?.count ?? .zero
+            view?.didGetProducts()
         }
     }
     
@@ -62,6 +63,5 @@ extension MainPresenter: InteractorToPresenterMainProtocol {
     
     func didFetchProducts(_ products: [Products]) {
         self.products = products
-        view?.didGetProducts()
     }
 }
