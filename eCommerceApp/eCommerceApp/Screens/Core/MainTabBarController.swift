@@ -102,6 +102,8 @@ final class MainTabBarController: UITabBarController, AlertPresentable {
     private func tabBarConfigure() {
         UITabBar.appearance().tintColor = UIColor(named: "primary")
         UITabBar.appearance().backgroundColor = UIColor(named: "background-2")
+        UITabBar.appearance().barTintColor = UIColor(named: "background-2")
+        UINavigationBar.appearance().barTintColor = UIColor(named: "background")
     }
     
 }
