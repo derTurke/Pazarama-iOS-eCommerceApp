@@ -7,28 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3F464BB9290D52F10007FAC9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F464BB8290D52F10007FAC9 /* User.swift */; };
-		3F464BBB290D556C0007FAC9 /* ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F464BBA290D556C0007FAC9 /* ErrorHandling.swift */; };
-		3F464BC0290D59A30007FAC9 /* Encodable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F464BBF290D59A30007FAC9 /* Encodable+Extensions.swift */; };
-		3F7A01B729142EFF006F7E29 /* ProfileContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7A01B629142EFF006F7E29 /* ProfileContract.swift */; };
-		3F82FD42291821B700040B8F /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3F82FD41291821B700040B8F /* IQKeyboardManagerSwift */; };
-		3F862B9A291110D700B9C902 /* Basket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F862B99291110D700B9C902 /* Basket.swift */; };
-		3F862B9C291125DE00B9C902 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F862B9B291125DE00B9C902 /* Double+Extensions.swift */; };
-		3F862BA7291166DE00B9C902 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F862BA6291166DE00B9C902 /* SearchView.swift */; };
-		3F862BA9291166F100B9C902 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F862BA8291166F100B9C902 /* SearchViewController.swift */; };
-		3F862BAB291166F900B9C902 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F862BAA291166F900B9C902 /* SearchPresenter.swift */; };
-		3F862BAD2911670200B9C902 /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F862BAC2911670200B9C902 /* SearchInteractor.swift */; };
-		3F862BAF2911671200B9C902 /* SearchContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F862BAE2911671200B9C902 /* SearchContract.swift */; };
-		3F862BB12911671A00B9C902 /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F862BB02911671A00B9C902 /* SearchRouter.swift */; };
-		3F862BC22911B53700B9C902 /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F862BC12911B53700B9C902 /* Notification+Extension.swift */; };
-		3F862BC52912840D00B9C902 /* BasketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F862BC42912840D00B9C902 /* BasketView.swift */; };
-		3F862BC72912841A00B9C902 /* BasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F862BC62912841A00B9C902 /* BasketViewController.swift */; };
-		3F862BCA2912925300B9C902 /* BasketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F862BC92912925300B9C902 /* BasketTableViewCell.swift */; };
-		3F862BCC2912CBE100B9C902 /* BasketPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F862BCB2912CBE100B9C902 /* BasketPresenter.swift */; };
-		3F862BCE2912CBEB00B9C902 /* BasketInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F862BCD2912CBEB00B9C902 /* BasketInteractor.swift */; };
-		3F862BD02912CBF900B9C902 /* BasketRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F862BCF2912CBF900B9C902 /* BasketRouter.swift */; };
-		3F862BD22912CC0700B9C902 /* BasketContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F862BD12912CC0700B9C902 /* BasketContract.swift */; };
-		3F9CB73F290ABF9800D21403 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CB73E290ABF9800D21403 /* AppDelegate.swift */; };
+		3F871E3629183A4D0036F189 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3F871E3529183A4D0036F189 /* FirebaseAuth */; };
+		3F871E3829183A4D0036F189 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 3F871E3729183A4D0036F189 /* FirebaseFirestore */; };
+		3F871E3A29183A4D0036F189 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 3F871E3929183A4D0036F189 /* FirebaseRemoteConfig */; };
+		3F871E3C29183A4D0036F189 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 3F871E3B29183A4D0036F189 /* FirebaseStorage */; };
+		3F871E4129183A890036F189 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 3F871E4029183A890036F189 /* Kingfisher */; };
+		3F871E4429183B2A0036F189 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3F871E4329183B2A0036F189 /* IQKeyboardManagerSwift */; };
 		3F9CB748290ABF9900D21403 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F9CB747290ABF9900D21403 /* Assets.xcassets */; };
 		3F9CB74B290ABF9900D21403 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F9CB749290ABF9900D21403 /* LaunchScreen.storyboard */; };
 		3F9CB756290ABF9900D21403 /* eCommerceAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CB755290ABF9900D21403 /* eCommerceAppTests.swift */; };
@@ -36,59 +20,7 @@
 		3F9CB762290ABF9900D21403 /* eCommerceAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CB761290ABF9900D21403 /* eCommerceAppUITestsLaunchTests.swift */; };
 		3F9CB78B290AC35000D21403 /* eCommerceAppAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F9CB78A290AC35000D21403 /* eCommerceAppAPI.framework */; };
 		3F9CB78C290AC35000D21403 /* eCommerceAppAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3F9CB78A290AC35000D21403 /* eCommerceAppAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3F9CB7A0290AC8F400D21403 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CB79F290AC8F400D21403 /* OnboardingViewController.swift */; };
-		3F9CB7A2290AC91200D21403 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CB7A1290AC91200D21403 /* OnboardingView.swift */; };
-		3F9CB7A6290AC9FE00D21403 /* CustomOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CB7A5290AC9FE00D21403 /* CustomOnboardingView.swift */; };
-		3F9CB7B3290ACFDC00D21403 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CB7B2290ACFDC00D21403 /* AuthViewController.swift */; };
-		3F9CB7BB290AD70A00D21403 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CB7BA290AD70A00D21403 /* SignInView.swift */; };
-		3F9CB7BD290AD71900D21403 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CB7BC290AD71900D21403 /* SignUpView.swift */; };
-		3F9CB7BF290AEF4200D21403 /* AuthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CB7BE290AEF4200D21403 /* AuthPresenter.swift */; };
-		3F9CB7C1290AEF4F00D21403 /* AuthInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CB7C0290AEF4F00D21403 /* AuthInteractor.swift */; };
-		3F9CB7C3290AF06A00D21403 /* AuthContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CB7C2290AF06A00D21403 /* AuthContract.swift */; };
-		3F9CB7C7290AF1DA00D21403 /* AuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CB7C6290AF1DA00D21403 /* AuthRouter.swift */; };
-		3F9CB7CB290AFC3B00D21403 /* AlertPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CB7CA290AFC3B00D21403 /* AlertPresentable.swift */; };
-		3F9CB7D7290B04AC00D21403 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3F9CB7D6290B04AC00D21403 /* FirebaseAuth */; };
-		3F9CB7D9290B04AC00D21403 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 3F9CB7D8290B04AC00D21403 /* FirebaseFirestore */; };
-		3F9CB7DB290B04AC00D21403 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 3F9CB7DA290B04AC00D21403 /* FirebaseRemoteConfig */; };
-		3F9CB7DD290B04AC00D21403 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 3F9CB7DC290B04AC00D21403 /* FirebaseStorage */; };
 		3F9CB7DF290B054900D21403 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F9CB7DE290B054900D21403 /* GoogleService-Info.plist */; };
-		3FAE640F290FDFAA00DA253D /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE640E290FDFAA00DA253D /* ProductDetailViewController.swift */; };
-		3FAE6411290FDFBA00DA253D /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE6410290FDFBA00DA253D /* ProductDetailView.swift */; };
-		3FAE6413290FE65F00DA253D /* ProductDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE6412290FE65F00DA253D /* ProductDetailPresenter.swift */; };
-		3FAE6415290FE67700DA253D /* ProductDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE6414290FE67700DA253D /* ProductDetailInteractor.swift */; };
-		3FAE6417290FE68400DA253D /* ProductDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE6416290FE68400DA253D /* ProductDetailRouter.swift */; };
-		3FAE6419290FE6BB00DA253D /* ProductDetailContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE6418290FE6BB00DA253D /* ProductDetailContract.swift */; };
-		3FCC6D012915ADD500CAAED2 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC6D002915ADD500CAAED2 /* Category.swift */; };
-		3FCC6D0929166C0900CAAED2 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC6D0829166C0900CAAED2 /* ProfilePresenter.swift */; };
-		3FCC6D0D29166C1100CAAED2 /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC6D0C29166C1100CAAED2 /* ProfileInteractor.swift */; };
-		3FCC6D0F29166C1900CAAED2 /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC6D0E29166C1900CAAED2 /* ProfileRouter.swift */; };
-		3FCC6D1329168F5200CAAED2 /* MainTabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC6D1229168F5200CAAED2 /* MainTabBarPresenter.swift */; };
-		3FCC6D1729168F5E00CAAED2 /* MainTabBarInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC6D1629168F5E00CAAED2 /* MainTabBarInteractor.swift */; };
-		3FCC6D1929168F6800CAAED2 /* MainTabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC6D1829168F6800CAAED2 /* MainTabBarRouter.swift */; };
-		3FCC6D1B29168F7400CAAED2 /* MainTabBarContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC6D1A29168F7400CAAED2 /* MainTabBarContract.swift */; };
-		3FCC6D202916AECE00CAAED2 /* OnboardingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC6D1F2916AECE00CAAED2 /* OnboardingPresenter.swift */; };
-		3FCC6D242916AED800CAAED2 /* OnboardingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC6D232916AED800CAAED2 /* OnboardingInteractor.swift */; };
-		3FCC6D262916AEE600CAAED2 /* OnboardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC6D252916AEE600CAAED2 /* OnboardingRouter.swift */; };
-		3FCC6D282916AEF600CAAED2 /* OnboardingContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC6D272916AEF600CAAED2 /* OnboardingContract.swift */; };
-		3FCC71F4290EAAB200685D2B /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC71F3290EAAB200685D2B /* SplashView.swift */; };
-		3FCC71F6290EAAC600685D2B /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC71F5290EAAC600685D2B /* SplashViewController.swift */; };
-		3FCC71F9290EAADA00685D2B /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC71F8290EAADA00685D2B /* SplashPresenter.swift */; };
-		3FCC71FB290EAAE400685D2B /* SplashInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC71FA290EAAE400685D2B /* SplashInteractor.swift */; };
-		3FCC71FD290EAB0300685D2B /* SplashRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC71FC290EAB0300685D2B /* SplashRouter.swift */; };
-		3FCC71FF290EAB0C00685D2B /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC71FE290EAB0C00685D2B /* Products.swift */; };
-		3FCC7201290EAB1B00685D2B /* SplashContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC7200290EAB1B00685D2B /* SplashContract.swift */; };
-		3FCC7209290EEDC400685D2B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 3FCC7208290EEDC400685D2B /* Kingfisher */; };
-		3FD802D8290D726F0022A437 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD802D7290D726F0022A437 /* MainTabBarController.swift */; };
-		3FD802DB290D804B0022A437 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD802DA290D804B0022A437 /* MainViewController.swift */; };
-		3FD802E0290D8E5F0022A437 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD802DF290D8E5F0022A437 /* MainCollectionViewCell.swift */; };
-		3FD802E2290DA9E40022A437 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD802E1290DA9E40022A437 /* MainView.swift */; };
-		3FD802E4290DB7D50022A437 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD802E3290DB7D50022A437 /* MainPresenter.swift */; };
-		3FD802E6290DB7DF0022A437 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD802E5290DB7DF0022A437 /* MainInteractor.swift */; };
-		3FD802E8290DB7F00022A437 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD802E7290DB7F00022A437 /* MainRouter.swift */; };
-		3FD802EC290DB88E0022A437 /* MainContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD802EB290DB88E0022A437 /* MainContract.swift */; };
-		3FE6D0A22913FA64006B5A13 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE6D0A12913FA64006B5A13 /* Order.swift */; };
-		3FE6D0AD29142806006B5A13 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE6D0AC29142806006B5A13 /* ProfileView.swift */; };
-		3FE6D0AF2914284B006B5A13 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE6D0AE2914284B006B5A13 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -224,13 +156,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F82FD42291821B700040B8F /* IQKeyboardManagerSwift in Frameworks */,
-				3FCC7209290EEDC400685D2B /* Kingfisher in Frameworks */,
+				3F871E4429183B2A0036F189 /* IQKeyboardManagerSwift in Frameworks */,
+				3F871E4129183A890036F189 /* Kingfisher in Frameworks */,
 				3F9CB78B290AC35000D21403 /* eCommerceAppAPI.framework in Frameworks */,
-				3F9CB7D7290B04AC00D21403 /* FirebaseAuth in Frameworks */,
-				3F9CB7D9290B04AC00D21403 /* FirebaseFirestore in Frameworks */,
-				3F9CB7DD290B04AC00D21403 /* FirebaseStorage in Frameworks */,
-				3F9CB7DB290B04AC00D21403 /* FirebaseRemoteConfig in Frameworks */,
+				3F871E3629183A4D0036F189 /* FirebaseAuth in Frameworks */,
+				3F871E3829183A4D0036F189 /* FirebaseFirestore in Frameworks */,
+				3F871E3C29183A4D0036F189 /* FirebaseStorage in Frameworks */,
+				3F871E3A29183A4D0036F189 /* FirebaseRemoteConfig in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -585,7 +517,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3F9CB765290ABF9900D21403 /* Build configuration list for PBXNativeTarget "eCommerceApp" */;
 			buildPhases = (
-				3F9CB737290ABF9800D21403 /* Sources */,
 				3F9CB738290ABF9800D21403 /* Frameworks */,
 				3F9CB739290ABF9800D21403 /* Resources */,
 				3F9CB78D290AC35000D21403 /* Embed Frameworks */,
@@ -596,12 +527,12 @@
 			);
 			name = eCommerceApp;
 			packageProductDependencies = (
-				3F9CB7D6290B04AC00D21403 /* FirebaseAuth */,
-				3F9CB7D8290B04AC00D21403 /* FirebaseFirestore */,
-				3F9CB7DA290B04AC00D21403 /* FirebaseRemoteConfig */,
-				3F9CB7DC290B04AC00D21403 /* FirebaseStorage */,
-				3FCC7208290EEDC400685D2B /* Kingfisher */,
-				3F82FD41291821B700040B8F /* IQKeyboardManagerSwift */,
+				3F871E3529183A4D0036F189 /* FirebaseAuth */,
+				3F871E3729183A4D0036F189 /* FirebaseFirestore */,
+				3F871E3929183A4D0036F189 /* FirebaseRemoteConfig */,
+				3F871E3B29183A4D0036F189 /* FirebaseStorage */,
+				3F871E4029183A890036F189 /* Kingfisher */,
+				3F871E4329183B2A0036F189 /* IQKeyboardManagerSwift */,
 			);
 			productName = eCommerceApp;
 			productReference = 3F9CB73B290ABF9800D21403 /* eCommerceApp.app */;
@@ -676,9 +607,9 @@
 			);
 			mainGroup = 3F9CB732290ABF9800D21403;
 			packageReferences = (
-				3F9CB7D5290B04AC00D21403 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				3FCC7207290EEDC400685D2B /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				3F82FD40291821B700040B8F /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				3F871E3429183A4D0036F189 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				3F871E3F29183A890036F189 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				3F871E4229183B2A0036F189 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = 3F9CB73C290ABF9800D21403 /* Products */;
 			projectDirPath = "";
@@ -742,81 +673,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3F9CB737290ABF9800D21403 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3F862BD02912CBF900B9C902 /* BasketRouter.swift in Sources */,
-				3FCC6D1729168F5E00CAAED2 /* MainTabBarInteractor.swift in Sources */,
-				3FAE640F290FDFAA00DA253D /* ProductDetailViewController.swift in Sources */,
-				3FAE6411290FDFBA00DA253D /* ProductDetailView.swift in Sources */,
-				3F862BCE2912CBEB00B9C902 /* BasketInteractor.swift in Sources */,
-				3F9CB7BF290AEF4200D21403 /* AuthPresenter.swift in Sources */,
-				3FAE6415290FE67700DA253D /* ProductDetailInteractor.swift in Sources */,
-				3F862B9A291110D700B9C902 /* Basket.swift in Sources */,
-				3F9CB7A6290AC9FE00D21403 /* CustomOnboardingView.swift in Sources */,
-				3F862BAD2911670200B9C902 /* SearchInteractor.swift in Sources */,
-				3FE6D0AF2914284B006B5A13 /* ProfileViewController.swift in Sources */,
-				3FCC71F4290EAAB200685D2B /* SplashView.swift in Sources */,
-				3F9CB7BB290AD70A00D21403 /* SignInView.swift in Sources */,
-				3F9CB7A2290AC91200D21403 /* OnboardingView.swift in Sources */,
-				3F9CB7BD290AD71900D21403 /* SignUpView.swift in Sources */,
-				3FCC6D202916AECE00CAAED2 /* OnboardingPresenter.swift in Sources */,
-				3F862BD22912CC0700B9C902 /* BasketContract.swift in Sources */,
-				3F862BA9291166F100B9C902 /* SearchViewController.swift in Sources */,
-				3FD802E6290DB7DF0022A437 /* MainInteractor.swift in Sources */,
-				3FCC71FD290EAB0300685D2B /* SplashRouter.swift in Sources */,
-				3FD802E2290DA9E40022A437 /* MainView.swift in Sources */,
-				3FCC71F9290EAADA00685D2B /* SplashPresenter.swift in Sources */,
-				3FCC6D1B29168F7400CAAED2 /* MainTabBarContract.swift in Sources */,
-				3F862BC22911B53700B9C902 /* Notification+Extension.swift in Sources */,
-				3FCC6D0D29166C1100CAAED2 /* ProfileInteractor.swift in Sources */,
-				3F9CB7C1290AEF4F00D21403 /* AuthInteractor.swift in Sources */,
-				3F9CB7B3290ACFDC00D21403 /* AuthViewController.swift in Sources */,
-				3FD802E8290DB7F00022A437 /* MainRouter.swift in Sources */,
-				3F7A01B729142EFF006F7E29 /* ProfileContract.swift in Sources */,
-				3FD802DB290D804B0022A437 /* MainViewController.swift in Sources */,
-				3FAE6413290FE65F00DA253D /* ProductDetailPresenter.swift in Sources */,
-				3F464BC0290D59A30007FAC9 /* Encodable+Extensions.swift in Sources */,
-				3F862BAB291166F900B9C902 /* SearchPresenter.swift in Sources */,
-				3F9CB7A0290AC8F400D21403 /* OnboardingViewController.swift in Sources */,
-				3F862BB12911671A00B9C902 /* SearchRouter.swift in Sources */,
-				3FCC71FB290EAAE400685D2B /* SplashInteractor.swift in Sources */,
-				3FCC6D0F29166C1900CAAED2 /* ProfileRouter.swift in Sources */,
-				3FD802E0290D8E5F0022A437 /* MainCollectionViewCell.swift in Sources */,
-				3F9CB7C7290AF1DA00D21403 /* AuthRouter.swift in Sources */,
-				3F862BC72912841A00B9C902 /* BasketViewController.swift in Sources */,
-				3FCC6D242916AED800CAAED2 /* OnboardingInteractor.swift in Sources */,
-				3FD802EC290DB88E0022A437 /* MainContract.swift in Sources */,
-				3FCC6D0929166C0900CAAED2 /* ProfilePresenter.swift in Sources */,
-				3FD802D8290D726F0022A437 /* MainTabBarController.swift in Sources */,
-				3FCC6D262916AEE600CAAED2 /* OnboardingRouter.swift in Sources */,
-				3FE6D0A22913FA64006B5A13 /* Order.swift in Sources */,
-				3FCC6D012915ADD500CAAED2 /* Category.swift in Sources */,
-				3FCC71F6290EAAC600685D2B /* SplashViewController.swift in Sources */,
-				3F862BCC2912CBE100B9C902 /* BasketPresenter.swift in Sources */,
-				3FE6D0AD29142806006B5A13 /* ProfileView.swift in Sources */,
-				3FAE6417290FE68400DA253D /* ProductDetailRouter.swift in Sources */,
-				3F464BBB290D556C0007FAC9 /* ErrorHandling.swift in Sources */,
-				3FD802E4290DB7D50022A437 /* MainPresenter.swift in Sources */,
-				3FCC7201290EAB1B00685D2B /* SplashContract.swift in Sources */,
-				3F9CB73F290ABF9800D21403 /* AppDelegate.swift in Sources */,
-				3F862B9C291125DE00B9C902 /* Double+Extensions.swift in Sources */,
-				3FCC6D1329168F5200CAAED2 /* MainTabBarPresenter.swift in Sources */,
-				3F9CB7CB290AFC3B00D21403 /* AlertPresentable.swift in Sources */,
-				3F862BCA2912925300B9C902 /* BasketTableViewCell.swift in Sources */,
-				3F862BA7291166DE00B9C902 /* SearchView.swift in Sources */,
-				3FAE6419290FE6BB00DA253D /* ProductDetailContract.swift in Sources */,
-				3FCC6D282916AEF600CAAED2 /* OnboardingContract.swift in Sources */,
-				3F862BC52912840D00B9C902 /* BasketView.swift in Sources */,
-				3F9CB7C3290AF06A00D21403 /* AuthContract.swift in Sources */,
-				3F464BB9290D52F10007FAC9 /* User.swift in Sources */,
-				3FCC71FF290EAB0C00685D2B /* Products.swift in Sources */,
-				3FCC6D1929168F6800CAAED2 /* MainTabBarRouter.swift in Sources */,
-				3F862BAF2911671200B9C902 /* SearchContract.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3F9CB74D290ABF9900D21403 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -911,7 +767,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -965,7 +821,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1157,15 +1013,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		3F82FD40291821B700040B8F /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-		3F9CB7D5290B04AC00D21403 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+		3F871E3429183A4D0036F189 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
 			requirement = {
@@ -1173,7 +1021,7 @@
 				minimumVersion = 9.0.0;
 			};
 		};
-		3FCC7207290EEDC400685D2B /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+		3F871E3F29183A890036F189 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
@@ -1181,38 +1029,46 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		3F871E4229183B2A0036F189 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		3F82FD41291821B700040B8F /* IQKeyboardManagerSwift */ = {
+		3F871E3529183A4D0036F189 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3F82FD40291821B700040B8F /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
-			productName = IQKeyboardManagerSwift;
-		};
-		3F9CB7D6290B04AC00D21403 /* FirebaseAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3F9CB7D5290B04AC00D21403 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 3F871E3429183A4D0036F189 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
 		};
-		3F9CB7D8290B04AC00D21403 /* FirebaseFirestore */ = {
+		3F871E3729183A4D0036F189 /* FirebaseFirestore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3F9CB7D5290B04AC00D21403 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 3F871E3429183A4D0036F189 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
 		};
-		3F9CB7DA290B04AC00D21403 /* FirebaseRemoteConfig */ = {
+		3F871E3929183A4D0036F189 /* FirebaseRemoteConfig */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3F9CB7D5290B04AC00D21403 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 3F871E3429183A4D0036F189 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseRemoteConfig;
 		};
-		3F9CB7DC290B04AC00D21403 /* FirebaseStorage */ = {
+		3F871E3B29183A4D0036F189 /* FirebaseStorage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3F9CB7D5290B04AC00D21403 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 3F871E3429183A4D0036F189 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
 		};
-		3FCC7208290EEDC400685D2B /* Kingfisher */ = {
+		3F871E4029183A890036F189 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3FCC7207290EEDC400685D2B /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			package = 3F871E3F29183A890036F189 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		3F871E4329183B2A0036F189 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3F871E4229183B2A0036F189 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
