@@ -51,10 +51,7 @@ extension AuthViewController: SignInViewDelegate {
         presenter?.signIn(email: email, password: password)
     }
     func didTapDontAccount() {
-        UIView.animate(withDuration: 0.3) { [weak self] in
-            guard let self = self else { return }
-            self.view = self.signUpView
-        }
+        self.view = self.signUpView
     }
 }
 
@@ -67,9 +64,6 @@ extension AuthViewController: SignUpViewDelegate {
                           passwordAgain: passwordAgain)
     }
     func didTapDoAccount() {
-        UIView.animate(withDuration: 0.3) { [weak self] in
-            guard let self = self else { return }
-            self.view = self.signInView
-        }
+        self.view = self.signInView
     }
 }
