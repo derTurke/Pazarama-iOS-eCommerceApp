@@ -7,6 +7,74 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F3762552918491400DF1522 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CB73E290ABF9800D21403 /* AppDelegate.swift */; };
+		3F3762562918492100DF1522 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC71F3290EAAB200685D2B /* SplashView.swift */; };
+		3F3762572918492100DF1522 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC71F5290EAAC600685D2B /* SplashViewController.swift */; };
+		3F3762582918492100DF1522 /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC71F8290EAADA00685D2B /* SplashPresenter.swift */; };
+		3F3762592918492100DF1522 /* SplashInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC71FA290EAAE400685D2B /* SplashInteractor.swift */; };
+		3F37625A2918492100DF1522 /* SplashRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC71FC290EAB0300685D2B /* SplashRouter.swift */; };
+		3F37625B2918492100DF1522 /* SplashContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC7200290EAB1B00685D2B /* SplashContract.swift */; };
+		3F37625C2918492A00DF1522 /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC71FE290EAB0C00685D2B /* Products.swift */; };
+		3F37625D2918494200DF1522 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F464BB8290D52F10007FAC9 /* User.swift */; };
+		3F37625E2918494200DF1522 /* Basket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F862B99291110D700B9C902 /* Basket.swift */; };
+		3F37625F2918494200DF1522 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE6D0A12913FA64006B5A13 /* Order.swift */; };
+		3F3762602918494200DF1522 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC6D002915ADD500CAAED2 /* Category.swift */; };
+		3F3762612918494D00DF1522 /* AlertPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CB7CA290AFC3B00D21403 /* AlertPresentable.swift */; };
+		3F3762622918499A00DF1522 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD802D7290D726F0022A437 /* MainTabBarController.swift */; };
+		3F3762632918499A00DF1522 /* MainTabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC6D1229168F5200CAAED2 /* MainTabBarPresenter.swift */; };
+		3F3762642918499A00DF1522 /* MainTabBarInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC6D1629168F5E00CAAED2 /* MainTabBarInteractor.swift */; };
+		3F3762652918499A00DF1522 /* MainTabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC6D1829168F6800CAAED2 /* MainTabBarRouter.swift */; };
+		3F3762662918499A00DF1522 /* MainTabBarContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC6D1A29168F7400CAAED2 /* MainTabBarContract.swift */; };
+		3F3762672918499A00DF1522 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CB7BA290AD70A00D21403 /* SignInView.swift */; };
+		3F3762682918499A00DF1522 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CB7BC290AD71900D21403 /* SignUpView.swift */; };
+		3F3762692918499A00DF1522 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CB7B2290ACFDC00D21403 /* AuthViewController.swift */; };
+		3F37626A2918499A00DF1522 /* AuthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CB7BE290AEF4200D21403 /* AuthPresenter.swift */; };
+		3F37626B2918499A00DF1522 /* AuthInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CB7C0290AEF4F00D21403 /* AuthInteractor.swift */; };
+		3F37626C2918499A00DF1522 /* AuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CB7C6290AF1DA00D21403 /* AuthRouter.swift */; };
+		3F37626D2918499A00DF1522 /* AuthContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CB7C2290AF06A00D21403 /* AuthContract.swift */; };
+		3F37626E2918499A00DF1522 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CB7A1290AC91200D21403 /* OnboardingView.swift */; };
+		3F37626F2918499A00DF1522 /* CustomOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CB7A5290AC9FE00D21403 /* CustomOnboardingView.swift */; };
+		3F3762702918499A00DF1522 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CB79F290AC8F400D21403 /* OnboardingViewController.swift */; };
+		3F3762712918499A00DF1522 /* OnboardingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC6D1F2916AECE00CAAED2 /* OnboardingPresenter.swift */; };
+		3F3762722918499A00DF1522 /* OnboardingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC6D232916AED800CAAED2 /* OnboardingInteractor.swift */; };
+		3F3762732918499A00DF1522 /* OnboardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC6D252916AEE600CAAED2 /* OnboardingRouter.swift */; };
+		3F3762742918499A00DF1522 /* OnboardingContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC6D272916AEF600CAAED2 /* OnboardingContract.swift */; };
+		3F376275291849AE00DF1522 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD802DF290D8E5F0022A437 /* MainCollectionViewCell.swift */; };
+		3F376276291849AE00DF1522 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD802E1290DA9E40022A437 /* MainView.swift */; };
+		3F376277291849AE00DF1522 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD802DA290D804B0022A437 /* MainViewController.swift */; };
+		3F376278291849AE00DF1522 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD802E3290DB7D50022A437 /* MainPresenter.swift */; };
+		3F376279291849AE00DF1522 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD802E5290DB7DF0022A437 /* MainInteractor.swift */; };
+		3F37627A291849AE00DF1522 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD802E7290DB7F00022A437 /* MainRouter.swift */; };
+		3F37627B291849AE00DF1522 /* MainContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD802EB290DB88E0022A437 /* MainContract.swift */; };
+		3F37627C291849C200DF1522 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE6D0AC29142806006B5A13 /* ProfileView.swift */; };
+		3F37627D291849C200DF1522 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE6D0AE2914284B006B5A13 /* ProfileViewController.swift */; };
+		3F37627E291849C200DF1522 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC6D0829166C0900CAAED2 /* ProfilePresenter.swift */; };
+		3F37627F291849C200DF1522 /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC6D0C29166C1100CAAED2 /* ProfileInteractor.swift */; };
+		3F376280291849C200DF1522 /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC6D0E29166C1900CAAED2 /* ProfileRouter.swift */; };
+		3F376281291849C200DF1522 /* ProfileContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7A01B629142EFF006F7E29 /* ProfileContract.swift */; };
+		3F376282291849C200DF1522 /* BasketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F862BC42912840D00B9C902 /* BasketView.swift */; };
+		3F376283291849C200DF1522 /* BasketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F862BC92912925300B9C902 /* BasketTableViewCell.swift */; };
+		3F376284291849C200DF1522 /* BasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F862BC62912841A00B9C902 /* BasketViewController.swift */; };
+		3F376285291849C200DF1522 /* BasketPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F862BCB2912CBE100B9C902 /* BasketPresenter.swift */; };
+		3F376286291849C200DF1522 /* BasketInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F862BCD2912CBEB00B9C902 /* BasketInteractor.swift */; };
+		3F376287291849C200DF1522 /* BasketRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F862BCF2912CBF900B9C902 /* BasketRouter.swift */; };
+		3F376288291849C200DF1522 /* BasketContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F862BD12912CC0700B9C902 /* BasketContract.swift */; };
+		3F376289291849C200DF1522 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F862BA6291166DE00B9C902 /* SearchView.swift */; };
+		3F37628A291849C200DF1522 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F862BA8291166F100B9C902 /* SearchViewController.swift */; };
+		3F37628B291849C200DF1522 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F862BAA291166F900B9C902 /* SearchPresenter.swift */; };
+		3F37628C291849C200DF1522 /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F862BAC2911670200B9C902 /* SearchInteractor.swift */; };
+		3F37628D291849C200DF1522 /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F862BB02911671A00B9C902 /* SearchRouter.swift */; };
+		3F37628E291849C200DF1522 /* SearchContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F862BAE2911671200B9C902 /* SearchContract.swift */; };
+		3F37628F291849C200DF1522 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE6410290FDFBA00DA253D /* ProductDetailView.swift */; };
+		3F376290291849C200DF1522 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE640E290FDFAA00DA253D /* ProductDetailViewController.swift */; };
+		3F376291291849C200DF1522 /* ProductDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE6412290FE65F00DA253D /* ProductDetailPresenter.swift */; };
+		3F376292291849C200DF1522 /* ProductDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE6414290FE67700DA253D /* ProductDetailInteractor.swift */; };
+		3F376293291849C200DF1522 /* ProductDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE6416290FE68400DA253D /* ProductDetailRouter.swift */; };
+		3F376294291849C200DF1522 /* ProductDetailContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAE6418290FE6BB00DA253D /* ProductDetailContract.swift */; };
+		3F376295291849DB00DF1522 /* Encodable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F464BBF290D59A30007FAC9 /* Encodable+Extensions.swift */; };
+		3F376296291849DB00DF1522 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F862B9B291125DE00B9C902 /* Double+Extensions.swift */; };
+		3F376297291849DB00DF1522 /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F862BC12911B53700B9C902 /* Notification+Extension.swift */; };
+		3F376298291849DB00DF1522 /* ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F464BBA290D556C0007FAC9 /* ErrorHandling.swift */; };
 		3F871E3629183A4D0036F189 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3F871E3529183A4D0036F189 /* FirebaseAuth */; };
 		3F871E3829183A4D0036F189 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 3F871E3729183A4D0036F189 /* FirebaseFirestore */; };
 		3F871E3A29183A4D0036F189 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 3F871E3929183A4D0036F189 /* FirebaseRemoteConfig */; };
@@ -520,6 +588,7 @@
 				3F9CB738290ABF9800D21403 /* Frameworks */,
 				3F9CB739290ABF9800D21403 /* Resources */,
 				3F9CB78D290AC35000D21403 /* Embed Frameworks */,
+				3F3762542918490300DF1522 /* Sources */,
 			);
 			buildRules = (
 			);
@@ -673,6 +742,81 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3F3762542918490300DF1522 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F376295291849DB00DF1522 /* Encodable+Extensions.swift in Sources */,
+				3F376296291849DB00DF1522 /* Double+Extensions.swift in Sources */,
+				3F376297291849DB00DF1522 /* Notification+Extension.swift in Sources */,
+				3F376298291849DB00DF1522 /* ErrorHandling.swift in Sources */,
+				3F37627C291849C200DF1522 /* ProfileView.swift in Sources */,
+				3F37627D291849C200DF1522 /* ProfileViewController.swift in Sources */,
+				3F37627E291849C200DF1522 /* ProfilePresenter.swift in Sources */,
+				3F37627F291849C200DF1522 /* ProfileInteractor.swift in Sources */,
+				3F376280291849C200DF1522 /* ProfileRouter.swift in Sources */,
+				3F376281291849C200DF1522 /* ProfileContract.swift in Sources */,
+				3F376282291849C200DF1522 /* BasketView.swift in Sources */,
+				3F376283291849C200DF1522 /* BasketTableViewCell.swift in Sources */,
+				3F376284291849C200DF1522 /* BasketViewController.swift in Sources */,
+				3F376285291849C200DF1522 /* BasketPresenter.swift in Sources */,
+				3F376286291849C200DF1522 /* BasketInteractor.swift in Sources */,
+				3F376287291849C200DF1522 /* BasketRouter.swift in Sources */,
+				3F376288291849C200DF1522 /* BasketContract.swift in Sources */,
+				3F376289291849C200DF1522 /* SearchView.swift in Sources */,
+				3F37628A291849C200DF1522 /* SearchViewController.swift in Sources */,
+				3F37628B291849C200DF1522 /* SearchPresenter.swift in Sources */,
+				3F37628C291849C200DF1522 /* SearchInteractor.swift in Sources */,
+				3F37628D291849C200DF1522 /* SearchRouter.swift in Sources */,
+				3F37628E291849C200DF1522 /* SearchContract.swift in Sources */,
+				3F37628F291849C200DF1522 /* ProductDetailView.swift in Sources */,
+				3F376290291849C200DF1522 /* ProductDetailViewController.swift in Sources */,
+				3F376291291849C200DF1522 /* ProductDetailPresenter.swift in Sources */,
+				3F376292291849C200DF1522 /* ProductDetailInteractor.swift in Sources */,
+				3F376293291849C200DF1522 /* ProductDetailRouter.swift in Sources */,
+				3F376294291849C200DF1522 /* ProductDetailContract.swift in Sources */,
+				3F376275291849AE00DF1522 /* MainCollectionViewCell.swift in Sources */,
+				3F376276291849AE00DF1522 /* MainView.swift in Sources */,
+				3F376277291849AE00DF1522 /* MainViewController.swift in Sources */,
+				3F376278291849AE00DF1522 /* MainPresenter.swift in Sources */,
+				3F376279291849AE00DF1522 /* MainInteractor.swift in Sources */,
+				3F37627A291849AE00DF1522 /* MainRouter.swift in Sources */,
+				3F37627B291849AE00DF1522 /* MainContract.swift in Sources */,
+				3F3762622918499A00DF1522 /* MainTabBarController.swift in Sources */,
+				3F3762632918499A00DF1522 /* MainTabBarPresenter.swift in Sources */,
+				3F3762642918499A00DF1522 /* MainTabBarInteractor.swift in Sources */,
+				3F3762652918499A00DF1522 /* MainTabBarRouter.swift in Sources */,
+				3F3762662918499A00DF1522 /* MainTabBarContract.swift in Sources */,
+				3F3762672918499A00DF1522 /* SignInView.swift in Sources */,
+				3F3762682918499A00DF1522 /* SignUpView.swift in Sources */,
+				3F3762692918499A00DF1522 /* AuthViewController.swift in Sources */,
+				3F37626A2918499A00DF1522 /* AuthPresenter.swift in Sources */,
+				3F37626B2918499A00DF1522 /* AuthInteractor.swift in Sources */,
+				3F37626C2918499A00DF1522 /* AuthRouter.swift in Sources */,
+				3F37626D2918499A00DF1522 /* AuthContract.swift in Sources */,
+				3F37626E2918499A00DF1522 /* OnboardingView.swift in Sources */,
+				3F37626F2918499A00DF1522 /* CustomOnboardingView.swift in Sources */,
+				3F3762702918499A00DF1522 /* OnboardingViewController.swift in Sources */,
+				3F3762712918499A00DF1522 /* OnboardingPresenter.swift in Sources */,
+				3F3762722918499A00DF1522 /* OnboardingInteractor.swift in Sources */,
+				3F3762732918499A00DF1522 /* OnboardingRouter.swift in Sources */,
+				3F3762742918499A00DF1522 /* OnboardingContract.swift in Sources */,
+				3F3762612918494D00DF1522 /* AlertPresentable.swift in Sources */,
+				3F37625D2918494200DF1522 /* User.swift in Sources */,
+				3F37625E2918494200DF1522 /* Basket.swift in Sources */,
+				3F37625F2918494200DF1522 /* Order.swift in Sources */,
+				3F3762602918494200DF1522 /* Category.swift in Sources */,
+				3F37625C2918492A00DF1522 /* Products.swift in Sources */,
+				3F3762562918492100DF1522 /* SplashView.swift in Sources */,
+				3F3762572918492100DF1522 /* SplashViewController.swift in Sources */,
+				3F3762582918492100DF1522 /* SplashPresenter.swift in Sources */,
+				3F3762592918492100DF1522 /* SplashInteractor.swift in Sources */,
+				3F37625A2918492100DF1522 /* SplashRouter.swift in Sources */,
+				3F37625B2918492100DF1522 /* SplashContract.swift in Sources */,
+				3F3762552918491400DF1522 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3F9CB74D290ABF9900D21403 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
