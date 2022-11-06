@@ -45,7 +45,6 @@ final class ProductDetailView: UIView {
         return scrollView
     }()
     
-    private let contentView = UIView()
     private let productImageView = UIImageView()
     
     private let bottomView: UIView = {
@@ -188,7 +187,6 @@ final class ProductDetailView: UIView {
         setupDismissButton()
         setupBottomView()
         setupScrollView()
-        setupContentView()
         setupImageView()
         setupVerticalStackView()
         setupBottomStackView()
@@ -202,7 +200,6 @@ final class ProductDetailView: UIView {
             dismissButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16)
         ])
     }
-    
     private func setupScrollView() {
         addSubview(scrollView)
         scrollView.translatesAutoresizingMaskIntoConstraints = false
@@ -211,35 +208,23 @@ final class ProductDetailView: UIView {
             scrollView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             scrollView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             scrollView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -125.0),
-        ])
-    }
-    
-    private func setupContentView() {
-        scrollView.addSubview(contentView)
-        contentView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            contentView.topAnchor.constraint(equalTo: self.topAnchor),
-            contentView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            contentView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            contentView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -125.0),
-            contentView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            contentView.widthAnchor.constraint(equalTo: self.widthAnchor)
+            scrollView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width)
         ])
     }
     
     private func setupImageView() {
-        contentView.addSubview(productImageView)
+        scrollView.addSubview(productImageView)
         productImageView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             productImageView.topAnchor.constraint(equalTo: scrollView.topAnchor),
             productImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             productImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            productImageView.heightAnchor.constraint(equalTo: self.widthAnchor)
+            productImageView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.width)
         ])
     }
     
     private func setupVerticalStackView() {
-        contentView.addSubview(verticalStackView)
+        scrollView.addSubview(verticalStackView)
         verticalStackView.translatesAutoresizingMaskIntoConstraints = false
         verticalStackView.addArrangedSubview(titleLabel)
         verticalStackView.addArrangedSubview(categoryLabel)
