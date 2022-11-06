@@ -13,8 +13,8 @@ final class AuthInteractor: PresenterToInteractorAuthProtocol {
     // MARK: Properties
     weak var presenter: InteractorToPresenterAuthProtocol?
     
+    var handle: AuthStateDidChangeListenerHandle?
     private let db = Firestore.firestore()
-    
     private let defaults = UserDefaults.standard
     
     //MARK: - Methods
@@ -77,5 +77,13 @@ final class AuthInteractor: PresenterToInteractorAuthProtocol {
         } catch {
             self.presenter?.didErrorOccurred(error)
         }
+    }
+    
+    func addStateDidChangeListener() {
+        handle = Auth.auth().addStateDidChangeListener{ auth, user in }
+    }
+    
+    func removeStateDidChangeListener() {
+        Auth.auth().removeStateDidChangeListener(handle!)
     }
 }

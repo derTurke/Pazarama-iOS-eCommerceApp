@@ -30,18 +30,24 @@ final class AuthViewController: UIViewController, AlertPresentable {
         signUpView.delegate = self
         view = signInView
         navigationItem.hidesBackButton = true
-        
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presenter?.addStateDidChangeListener()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        presenter?.removeStateDidChangeListener()
+    }
+    
 }
 
 //MARK: - PresenterToViewAuthProtocol
 extension AuthViewController: PresenterToViewAuthProtocol {
     func didErrorOccurred(_ error: Error) {
         showError(error)
-    }
-    
-    func didAuthSuccess() {
-        
     }
 }
 

@@ -9,6 +9,7 @@ import UIKit
 import FirebaseCore
 import FirebaseFirestore
 import FirebaseAuth
+import IQKeyboardManagerSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         setupFirebase()
+        setupIQKeyboardManager()
         setupInitialWindow()
         tabBarConfigure()
         return true
@@ -42,6 +44,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBar.appearance().backgroundColor = UIColor(named: "background-2")
         UITabBar.appearance().barTintColor = UIColor(named: "background-2")
         UINavigationBar.appearance().barTintColor = UIColor(named: "background")
+    }
+    
+    private func setupIQKeyboardManager() {
+        IQKeyboardManager.shared.enable = true
     }
 }
 

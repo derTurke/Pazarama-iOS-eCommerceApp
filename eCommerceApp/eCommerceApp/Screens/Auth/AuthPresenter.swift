@@ -25,6 +25,13 @@ final class AuthPresenter: ViewToPresenterAuthProtocol {
                                passwordAgain: passwordAgain)
     }
     
+    func addStateDidChangeListener() {
+        interactor?.addStateDidChangeListener()
+    }
+    
+    func removeStateDidChangeListener() {
+        interactor?.removeStateDidChangeListener()
+    }
 }
 
 extension AuthPresenter: InteractorToPresenterAuthProtocol {
@@ -33,7 +40,6 @@ extension AuthPresenter: InteractorToPresenterAuthProtocol {
     }
     
     func didAuthSuccess() {
-        view?.didAuthSuccess()
         router?.pushToMain(on: view!)
     }
 }
