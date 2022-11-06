@@ -9,7 +9,7 @@ import UIKit
 import FirebaseAuth
 import FirebaseFirestore
 
-final class ProfileViewController: UIViewController, AlertPresentable, DimmedPresentable{
+final class ProfileViewController: UIViewController, AlertPresentable{
     //MARK: - Properties
     private let profileView = ProfileView()
     var presenter: ViewToPresenterProfileProtocol!
