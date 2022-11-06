@@ -12,7 +12,7 @@ import UIKit
 protocol PresenterToViewSplashProtocol: AnyObject {
     func didErrorOccurred(_ error: Error)
     func didGetProducts()
-    func didGetUserDefaults(with viewController: UIViewController)
+    func didGetUserDefaults()
 }
 
 // MARK: View Input (View -> Presenter)
@@ -22,6 +22,7 @@ protocol ViewToPresenterSplashProtocol {
     var router: PresenterToRouterSplashProtocol? { get set }
     
     func getProducts()
+    func getCategories()
     func getUserDefaults()
 }
 
@@ -30,6 +31,9 @@ protocol PresenterToInteractorSplashProtocol {
     var presenter: InteractorToPresenterSplashProtocol? { get set }
     
     func fetchProducts()
+    func addProductsToFirebaseFirestore(_ products: [Products]?)
+    func fetchCategories()
+    func addCategoriesToFirebaseFirestore(_ categories: [Category]?)
     func fetchUserDefaults()
 }
 
@@ -43,4 +47,5 @@ protocol InteractorToPresenterSplashProtocol: AnyObject {
 // MARK: Router Input (Presenter -> Router)
 protocol PresenterToRouterSplashProtocol {
     static func createModule() -> UIViewController
+    func pushToView(on view: PresenterToViewSplashProtocol, with pushViewController: UIViewController)
 }

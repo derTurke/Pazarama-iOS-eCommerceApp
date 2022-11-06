@@ -20,4 +20,9 @@ final class AuthRouter: PresenterToRouterAuthProtocol {
         
         return viewController
     }
+    func pushToMain(on view: PresenterToViewAuthProtocol) {
+        let mainViewController = MainTabBarRouter.createModule()
+        let viewController = view as! AuthViewController
+        viewController.navigationController?.pushViewController(mainViewController, animated: true)
+    }
 }

@@ -232,7 +232,7 @@ final class SignUpView: UIView {
     }
     
     @objc private func didTapSignUp() {
-        UIView.animate(withDuration: 0.5) {
+        UIView.animate(withDuration: 1.0) {
             self.dimmedView.alpha = 0.7
             self.spinner.startAnimating()
         }
@@ -257,7 +257,7 @@ final class SignUpView: UIView {
     }
     
     private func spinnerHide() {
-        UIView.animate(withDuration: 0.5) {
+        UIView.animate(withDuration: 1.0) {
             self.spinner.stopAnimating()
             self.spinner.hidesWhenStopped = true
             self.dimmedView.alpha = 0.0

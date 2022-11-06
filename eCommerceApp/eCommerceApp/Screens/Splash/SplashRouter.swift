@@ -20,4 +20,9 @@ final class SplashRouter: PresenterToRouterSplashProtocol {
         
         return viewController
     }
+    
+    func pushToView(on view: PresenterToViewSplashProtocol, with pushViewController: UIViewController) {
+        let viewController = view as! SplashViewController
+        viewController.navigationController?.pushViewController(pushViewController, animated: true)
+    }
 }

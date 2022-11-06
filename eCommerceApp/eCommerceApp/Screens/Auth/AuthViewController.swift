@@ -30,23 +30,24 @@ final class AuthViewController: UIViewController, AlertPresentable {
         signUpView.delegate = self
         view = signInView
         navigationItem.hidesBackButton = true
-        
     }
     
-    //MARK: - Methods
-    private func goToMain() {
-        navigationController?.pushViewController(MainTabBarController(), animated: true)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presenter?.addStateDidChangeListener()
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        presenter?.removeStateDidChangeListener()
+    }
+    
 }
 
 //MARK: - PresenterToViewAuthProtocol
 extension AuthViewController: PresenterToViewAuthProtocol {
     func didErrorOccurred(_ error: Error) {
         showError(error)
-    }
-    
-    func didAuthSuccess() {
-        goToMain()
     }
 }
 
@@ -56,10 +57,7 @@ extension AuthViewController: SignInViewDelegate {
         presenter?.signIn(email: email, password: password)
     }
     func didTapDontAccount() {
-        UIView.animate(withDuration: 0.3) { [weak self] in
-            guard let self = self else { return }
-            self.view = self.signUpView
-        }
+        self.view = self.signUpView
     }
 }
 
@@ -72,9 +70,6 @@ extension AuthViewController: SignUpViewDelegate {
                           passwordAgain: passwordAgain)
     }
     func didTapDoAccount() {
-        UIView.animate(withDuration: 0.3) { [weak self] in
-            guard let self = self else { return }
-            self.view = self.signInView
-        }
+        self.view = self.signInView
     }
 }

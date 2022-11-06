@@ -12,7 +12,8 @@ public let fakeStoreProvider = MoyaProvider<FakeStoreApi>()
 
 public enum FakeStoreApi {
     case getProducts
-    case getSingleProduct(_ id: String)
+    case getSingleProduct(_ id: Int)
+    case getCategories
 }
 
 extension FakeStoreApi: TargetType {
@@ -29,6 +30,8 @@ extension FakeStoreApi: TargetType {
                 return "/"
             case .getSingleProduct(let id):
                 return "/\(id)"
+            case .getCategories:
+                return "/categories"
         }
     }
     

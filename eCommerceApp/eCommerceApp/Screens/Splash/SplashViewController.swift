@@ -11,17 +11,17 @@ final class SplashViewController: UIViewController, AlertPresentable {
     //MARK: - Properties
     private let splashView = SplashView()
     var presenter: ViewToPresenterSplashProtocol?
-    //MARK: - Init
     
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         view = splashView
         navigationItem.hidesBackButton = true
+        presenter?.getCategories()
         presenter?.getProducts()
     }
-    //MARK: - Methods
 }
+
 //MARK: - PresenterToViewSplashProtocol
 extension SplashViewController: PresenterToViewSplashProtocol {
     func didErrorOccurred(_ error: Error) {
@@ -32,8 +32,7 @@ extension SplashViewController: PresenterToViewSplashProtocol {
         presenter?.getUserDefaults()
     }
     
-    func didGetUserDefaults(with viewController: UIViewController) {
+    func didGetUserDefaults() {
         splashView.hideSpinner()
-        navigationController?.pushViewController(viewController, animated: true)
     }
 }

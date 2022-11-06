@@ -6,18 +6,22 @@
 //
 
 import UIKit
+import Kingfisher
 
 final class MainCollectionViewCell: UICollectionViewCell {
     //MARK: - Properties
-    var name: String? {
-        didSet {
-            productName.text = name
-        }
-    }
     
-    var price: String? {
+    var product: Products? {
         didSet {
-            productPrice.text = price
+            guard let product = product, let price = product.price else {
+                return
+            }
+            guard let url = URL(string: product.image ?? "") else {
+                return
+            }
+            imageView.kf.setImage(with: url)
+            productName.text = product.title
+            productPrice.text = "\(price.priceFormatted)"
         }
     }
     
@@ -30,7 +34,7 @@ final class MainCollectionViewCell: UICollectionViewCell {
     
     private let productName: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "Helvetica-bold", size: 18)
+        label.font = UIFont(name: "Helvetica-bold", size: 15)
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 0
         label.textColor = .black
@@ -39,7 +43,7 @@ final class MainCollectionViewCell: UICollectionViewCell {
     
     private let productPrice: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "Helvetica-bold", size: 18)
+        label.font = UIFont(name: "Helvetica-bold", size: 15)
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 0
         label.textColor = .black

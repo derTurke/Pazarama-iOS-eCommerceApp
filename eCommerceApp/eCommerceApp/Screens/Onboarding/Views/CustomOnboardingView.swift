@@ -62,7 +62,6 @@ final class CustomOnboardingView: UIView {
             descriptionLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 40.0),
             descriptionLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10.0),
             descriptionLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10.0),
-            descriptionLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -20.0)
         ])
     }
 }

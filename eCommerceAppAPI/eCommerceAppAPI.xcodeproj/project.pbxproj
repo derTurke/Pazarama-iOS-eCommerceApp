@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3F464BAC290D10AF0007FAC9 /* eCommerceAppAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F464BAB290D10AF0007FAC9 /* eCommerceAppAPITests.swift */; };
 		3F464BAD290D10AF0007FAC9 /* eCommerceAppAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F9CB77F290AC30500D21403 /* eCommerceAppAPI.framework */; platformFilter = ios; };
+		3F82FD37291812D800040B8F /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F82FD36291812D800040B8F /* Product.swift */; };
+		3F82FD392918157100040B8F /* product.json in Resources */ = {isa = PBXBuildFile; fileRef = 3F82FD382918157100040B8F /* product.json */; };
 		3F9CB783290AC30500D21403 /* eCommerceAppAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F9CB782290AC30500D21403 /* eCommerceAppAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3FCC71EF290EA3BF00685D2B /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 3FCC71EE290EA3BF00685D2B /* Moya */; };
 		3FCC71F1290EA46500685D2B /* FakeStoreAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC71F0290EA46500685D2B /* FakeStoreAPI.swift */; };
@@ -27,6 +29,8 @@
 /* Begin PBXFileReference section */
 		3F464BA9290D10AF0007FAC9 /* eCommerceAppAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eCommerceAppAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F464BAB290D10AF0007FAC9 /* eCommerceAppAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eCommerceAppAPITests.swift; sourceTree = "<group>"; };
+		3F82FD36291812D800040B8F /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		3F82FD382918157100040B8F /* product.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = product.json; sourceTree = "<group>"; };
 		3F9CB77F290AC30500D21403 /* eCommerceAppAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = eCommerceAppAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F9CB782290AC30500D21403 /* eCommerceAppAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = eCommerceAppAPI.h; sourceTree = "<group>"; };
 		3FCC71F0290EA46500685D2B /* FakeStoreAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeStoreAPI.swift; sourceTree = "<group>"; };
@@ -55,9 +59,26 @@
 		3F464BAA290D10AF0007FAC9 /* eCommerceAppAPITests */ = {
 			isa = PBXGroup;
 			children = (
+				3F82FD3A2918158600040B8F /* MockData */,
 				3F464BAB290D10AF0007FAC9 /* eCommerceAppAPITests.swift */,
 			);
 			path = eCommerceAppAPITests;
+			sourceTree = "<group>";
+		};
+		3F82FD34291812B800040B8F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3F82FD36291812D800040B8F /* Product.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3F82FD3A2918158600040B8F /* MockData */ = {
+			isa = PBXGroup;
+			children = (
+				3F82FD382918157100040B8F /* product.json */,
+			);
+			path = MockData;
 			sourceTree = "<group>";
 		};
 		3F9CB775290AC30500D21403 = {
@@ -81,6 +102,7 @@
 		3F9CB781290AC30500D21403 /* eCommerceAppAPI */ = {
 			isa = PBXGroup;
 			children = (
+				3F82FD34291812B800040B8F /* Model */,
 				3F9CB782290AC30500D21403 /* eCommerceAppAPI.h */,
 				3FCC71F0290EA46500685D2B /* FakeStoreAPI.swift */,
 			);
@@ -186,6 +208,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F82FD392918157100040B8F /* product.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FCC71F1290EA46500685D2B /* FakeStoreAPI.swift in Sources */,
+				3F82FD37291812D800040B8F /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
