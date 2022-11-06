@@ -104,7 +104,7 @@ final class SplashInteractor: PresenterToInteractorSplashProtocol {
         } else if defaults.integer(forKey: "skipOnboarding") == 1 {
             presenter?.didFetchUserDefaults(with: AuthRouter.createModule())
         } else {
-            presenter?.didFetchUserDefaults(with: OnboardingViewController())
+            presenter?.didFetchUserDefaults(with: OnboardingRouter.createModule())
         }
     }
 }

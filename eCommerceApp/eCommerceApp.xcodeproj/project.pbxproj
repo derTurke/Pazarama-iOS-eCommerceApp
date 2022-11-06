@@ -66,6 +66,10 @@
 		3FCC6D1729168F5E00CAAED2 /* MainTabBarInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC6D1629168F5E00CAAED2 /* MainTabBarInteractor.swift */; };
 		3FCC6D1929168F6800CAAED2 /* MainTabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC6D1829168F6800CAAED2 /* MainTabBarRouter.swift */; };
 		3FCC6D1B29168F7400CAAED2 /* MainTabBarContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC6D1A29168F7400CAAED2 /* MainTabBarContract.swift */; };
+		3FCC6D202916AECE00CAAED2 /* OnboardingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC6D1F2916AECE00CAAED2 /* OnboardingPresenter.swift */; };
+		3FCC6D242916AED800CAAED2 /* OnboardingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC6D232916AED800CAAED2 /* OnboardingInteractor.swift */; };
+		3FCC6D262916AEE600CAAED2 /* OnboardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC6D252916AEE600CAAED2 /* OnboardingRouter.swift */; };
+		3FCC6D282916AEF600CAAED2 /* OnboardingContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC6D272916AEF600CAAED2 /* OnboardingContract.swift */; };
 		3FCC71F4290EAAB200685D2B /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC71F3290EAAB200685D2B /* SplashView.swift */; };
 		3FCC71F6290EAAC600685D2B /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC71F5290EAAC600685D2B /* SplashViewController.swift */; };
 		3FCC71F9290EAADA00685D2B /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC71F8290EAADA00685D2B /* SplashPresenter.swift */; };
@@ -192,6 +196,10 @@
 		3FCC6D1629168F5E00CAAED2 /* MainTabBarInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarInteractor.swift; sourceTree = "<group>"; };
 		3FCC6D1829168F6800CAAED2 /* MainTabBarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarRouter.swift; sourceTree = "<group>"; };
 		3FCC6D1A29168F7400CAAED2 /* MainTabBarContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarContract.swift; sourceTree = "<group>"; };
+		3FCC6D1F2916AECE00CAAED2 /* OnboardingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPresenter.swift; sourceTree = "<group>"; };
+		3FCC6D232916AED800CAAED2 /* OnboardingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingInteractor.swift; sourceTree = "<group>"; };
+		3FCC6D252916AEE600CAAED2 /* OnboardingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRouter.swift; sourceTree = "<group>"; };
+		3FCC6D272916AEF600CAAED2 /* OnboardingContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContract.swift; sourceTree = "<group>"; };
 		3FCC71F3290EAAB200685D2B /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		3FCC71F5290EAAC600685D2B /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		3FCC71F8290EAADA00685D2B /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
@@ -440,6 +448,10 @@
 			children = (
 				3F9CB7A4290AC9DC00D21403 /* Views */,
 				3F9CB79F290AC8F400D21403 /* OnboardingViewController.swift */,
+				3FCC6D1F2916AECE00CAAED2 /* OnboardingPresenter.swift */,
+				3FCC6D232916AED800CAAED2 /* OnboardingInteractor.swift */,
+				3FCC6D252916AEE600CAAED2 /* OnboardingRouter.swift */,
+				3FCC6D272916AEF600CAAED2 /* OnboardingContract.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -748,6 +760,7 @@
 				3F9CB7BB290AD70A00D21403 /* SignInView.swift in Sources */,
 				3F9CB7A2290AC91200D21403 /* OnboardingView.swift in Sources */,
 				3F9CB7BD290AD71900D21403 /* SignUpView.swift in Sources */,
+				3FCC6D202916AECE00CAAED2 /* OnboardingPresenter.swift in Sources */,
 				3F862BD22912CC0700B9C902 /* BasketContract.swift in Sources */,
 				3F862BA9291166F100B9C902 /* SearchViewController.swift in Sources */,
 				3FD802E6290DB7DF0022A437 /* MainInteractor.swift in Sources */,
@@ -773,9 +786,11 @@
 				3FD802E0290D8E5F0022A437 /* MainCollectionViewCell.swift in Sources */,
 				3F9CB7C7290AF1DA00D21403 /* AuthRouter.swift in Sources */,
 				3F862BC72912841A00B9C902 /* BasketViewController.swift in Sources */,
+				3FCC6D242916AED800CAAED2 /* OnboardingInteractor.swift in Sources */,
 				3FD802EC290DB88E0022A437 /* MainContract.swift in Sources */,
 				3FCC6D0929166C0900CAAED2 /* ProfilePresenter.swift in Sources */,
 				3FD802D8290D726F0022A437 /* MainTabBarController.swift in Sources */,
+				3FCC6D262916AEE600CAAED2 /* OnboardingRouter.swift in Sources */,
 				3FE6D0A22913FA64006B5A13 /* Order.swift in Sources */,
 				3FCC6D012915ADD500CAAED2 /* Category.swift in Sources */,
 				3FCC71F6290EAAC600685D2B /* SplashViewController.swift in Sources */,
@@ -792,6 +807,7 @@
 				3F862BCA2912925300B9C902 /* BasketTableViewCell.swift in Sources */,
 				3F862BA7291166DE00B9C902 /* SearchView.swift in Sources */,
 				3FAE6419290FE6BB00DA253D /* ProductDetailContract.swift in Sources */,
+				3FCC6D282916AEF600CAAED2 /* OnboardingContract.swift in Sources */,
 				3F862BC52912840D00B9C902 /* BasketView.swift in Sources */,
 				3F9CB7C3290AF06A00D21403 /* AuthContract.swift in Sources */,
 				3F464BB9290D52F10007FAC9 /* User.swift in Sources */,
